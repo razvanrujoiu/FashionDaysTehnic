@@ -25,7 +25,9 @@ final class ProductDataToDomainMapper: Mapper {
                      name: value.name,
                      brand: value.brand,
                      price: value.price,
+                     originalPrice: value.originalPrice,
                      stockState: value.stockState,
-                     images: value.images)
+                     imagesListing: value.imagesListing,
+                     imagesDetail: value.imagesDetail)
     }
 }

@@ -12,15 +12,26 @@ public struct ProductPresentationModel: Hashable {
     public let name: String
     public let brand: String
     public let price: Double
+    public let originalPrice: Double
     public let stockState: String
-    public let images: [String]
+    public let imagesListing: [URL]
+    public let imagesDetail: [URL]
     
-    init(id: Double, name: String, brand: String, price: Double, stockState: String, images: [String]) {
+    init(id: Double,
+         name: String,
+         brand: String,
+         price: Double,
+         originalPrice: Double,
+         stockState: String,
+         imagesListing: [URL],
+         imagesDetail: [URL]) {
         self.id = id
         self.name = name
         self.brand = brand
         self.price = price
+        self.originalPrice = originalPrice
         self.stockState = stockState
-        self.images = images
+        self.imagesListing = imagesListing
+        self.imagesDetail = imagesDetail
     }
 }

@@ -25,7 +25,6 @@
 		E3C3F4DC2A9917D300D4E0C1 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F4DB2A9917D300D4E0C1 /* ApiEndpoint.swift */; };
 		E3C3F4DE2A9917FE00D4E0C1 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F4DD2A9917FE00D4E0C1 /* HTTPMethod.swift */; };
 		E3C3F4E12A991AC600D4E0C1 /* ProductRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F4E02A991AC600D4E0C1 /* ProductRemoteDataSource.swift */; };
-		E3C3F4E72A991D1E00D4E0C1 /* APIStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F4E62A991D1E00D4E0C1 /* APIStore.swift */; };
 		E3C3F4E92A9922C900D4E0C1 /* Mapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F4E82A9922C900D4E0C1 /* Mapper.swift */; };
 		E3C3F4EC2A99231A00D4E0C1 /* ProductRemoteDataToDataModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F4EB2A99231A00D4E0C1 /* ProductRemoteDataToDataModelMapper.swift */; };
 		E3C3F4F52A992A2100D4E0C1 /* ProductDomainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F4F42A992A2100D4E0C1 /* ProductDomainModel.swift */; };
@@ -42,6 +41,7 @@
 		E3C3F54D2A99623300D4E0C1 /* Inject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F54C2A99623300D4E0C1 /* Inject.swift */; };
 		E3C3F54F2A99625A00D4E0C1 /* Resolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F54E2A99625A00D4E0C1 /* Resolver.swift */; };
 		E3C3F5512A9962BB00D4E0C1 /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5502A9962BB00D4E0C1 /* DIContainer.swift */; };
+		E3C3F5552A9A0DC900D4E0C1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E3C3F5542A9A0DC900D4E0C1 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,7 +60,6 @@
 		E3C3F4DB2A9917D300D4E0C1 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
 		E3C3F4DD2A9917FE00D4E0C1 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		E3C3F4E02A991AC600D4E0C1 /* ProductRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteDataSource.swift; sourceTree = "<group>"; };
-		E3C3F4E62A991D1E00D4E0C1 /* APIStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStore.swift; sourceTree = "<group>"; };
 		E3C3F4E82A9922C900D4E0C1 /* Mapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mapper.swift; sourceTree = "<group>"; };
 		E3C3F4EB2A99231A00D4E0C1 /* ProductRemoteDataToDataModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteDataToDataModelMapper.swift; sourceTree = "<group>"; };
 		E3C3F4F42A992A2100D4E0C1 /* ProductDomainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDomainModel.swift; sourceTree = "<group>"; };
@@ -88,6 +87,7 @@
 				E3C3F4C52A990EAE00D4E0C1 /* Swinject-Dynamic in Frameworks */,
 				E3C3F4CA2A990EBE00D4E0C1 /* SwinjectAutoregistration-Dynamic in Frameworks */,
 				E3C3F4C82A990EBE00D4E0C1 /* SwinjectAutoregistration in Frameworks */,
+				E3C3F5552A9A0DC900D4E0C1 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,7 +235,6 @@
 				E3C3F4D92A99154D00D4E0C1 /* CoreNetworkingController.swift */,
 				E3C3F4DB2A9917D300D4E0C1 /* ApiEndpoint.swift */,
 				E3C3F4DD2A9917FE00D4E0C1 /* HTTPMethod.swift */,
-				E3C3F4E62A991D1E00D4E0C1 /* APIStore.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -401,6 +400,7 @@
 				E3C3F4C42A990EAE00D4E0C1 /* Swinject-Dynamic */,
 				E3C3F4C72A990EBE00D4E0C1 /* SwinjectAutoregistration */,
 				E3C3F4C92A990EBE00D4E0C1 /* SwinjectAutoregistration-Dynamic */,
+				E3C3F5542A9A0DC900D4E0C1 /* Kingfisher */,
 			);
 			productName = FashionDays;
 			productReference = E3C3F4A82A990D0D00D4E0C1 /* FashionDays.app */;
@@ -433,6 +433,7 @@
 			packageReferences = (
 				E3C3F4C12A990EAE00D4E0C1 /* XCRemoteSwiftPackageReference "Swinject" */,
 				E3C3F4C62A990EBE00D4E0C1 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */,
+				E3C3F5532A9A0DC900D4E0C1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = E3C3F4A92A990D0D00D4E0C1 /* Products */;
 			projectDirPath = "";
@@ -486,7 +487,6 @@
 				E3C3F5512A9962BB00D4E0C1 /* DIContainer.swift in Sources */,
 				E3C3F4D12A99111400D4E0C1 /* ProductService.swift in Sources */,
 				E3C3F4E92A9922C900D4E0C1 /* Mapper.swift in Sources */,
-				E3C3F4E72A991D1E00D4E0C1 /* APIStore.swift in Sources */,
 				E3C3F4E12A991AC600D4E0C1 /* ProductRemoteDataSource.swift in Sources */,
 				E3C3F5232A9940F000D4E0C1 /* ProductListViewModel.swift in Sources */,
 			);
@@ -712,6 +712,14 @@
 				minimumVersion = 2.8.3;
 			};
 		};
+		E3C3F5532A9A0DC900D4E0C1 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -734,6 +742,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E3C3F4C62A990EBE00D4E0C1 /* XCRemoteSwiftPackageReference "SwinjectAutoregistration" */;
 			productName = "SwinjectAutoregistration-Dynamic";
+		};
+		E3C3F5542A9A0DC900D4E0C1 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E3C3F5532A9A0DC900D4E0C1 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

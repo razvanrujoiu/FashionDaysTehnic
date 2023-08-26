@@ -25,7 +25,19 @@ class ProductDomainToPresentationMapper: Mapper {
                      name: value.name,
                      brand: value.brand,
                      price: value.price,
+                     originalPrice: value.originalPrice,
                      stockState: value.stockState,
-                     images: value.images)
+                     imagesListing: mapImages(value.imagesListing),
+                     imagesDetail: mapImages(value.imagesDetail))
+    }
+    
+    func mapImages(_ value: [String]) -> [URL] {
+        var imagesUrls: [URL] = []
+        for imageString in value {
+            if let url = URL(string: imageString) {
+                imagesUrls.append(url)
+            }
+        }
+        return imagesUrls
     }
 }

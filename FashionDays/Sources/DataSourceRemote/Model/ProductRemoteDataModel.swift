@@ -16,6 +16,7 @@ struct ProductRemoteDataModel: Decodable {
     let name: String
     let brand: String
     let price: Double
+    let originalPrice: Double
     let stockState: String
     let images: ImagesDetail
     
@@ -24,15 +25,13 @@ struct ProductRemoteDataModel: Decodable {
         case name = "product_name"
         case brand = "product_brand"
         case price = "product_price"
+        case originalPrice = "product_original_price"
         case stockState = "product_stock_state"
         case images = "product_images"
     }
     
     struct ImagesDetail: Decodable {
-        let images: [String]
-        
-        private enum CodingKeys: String, CodingKey {
-            case images = "detail"
-        }
+        let listing: [String]
+        let detail: [String]
     }
 }

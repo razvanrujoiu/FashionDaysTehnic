@@ -25,7 +25,9 @@ class ProductRemoteDataToDataModelMapper: Mapper {
                      name: value.name,
                      brand: value.brand,
                      price: value.price,
+                     originalPrice: value.originalPrice,
                      stockState: value.stockState,
-                     images: value.images.images)
+                     imagesListing: value.images.listing,
+                     imagesDetail: value.images.detail)
     }
 }
