@@ -8,14 +8,14 @@
 import Foundation
 
 public struct ProductDomainModel {
-    public let id: String
+    public let id: Double
     public let name: String
     public let brand: String
     public let price: Double
     public let stockState: String
     public let images: [String]
     
-    init(id: String, name: String, brand: String, price: Double, stockState: String, images: [String]) {
+    init(id: Double, name: String, brand: String, price: Double, stockState: String, images: [String]) {
         self.id = id
         self.name = name
         self.brand = brand

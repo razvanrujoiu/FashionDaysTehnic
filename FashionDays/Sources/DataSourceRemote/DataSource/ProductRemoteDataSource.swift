@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ProductRemoteDataSourceType {
-    func getRemoteProducts() async throws -> [ProductRemoteDataModel]
+    func getRemoteProducts() async throws -> ProductsRemoteDataModel
 }
 
 class ProductRemoteDataSource: ProductRemoteDataSourceType {
@@ -38,7 +38,7 @@ class ProductRemoteDataSource: ProductRemoteDataSourceType {
         return ProductService(parameters: parameters)
     }
     
-    func getRemoteProducts() async throws -> [ProductRemoteDataModel] {
+    func getRemoteProducts() async throws -> ProductsRemoteDataModel {
         try await buildProductService().sendRequest()
     }
 }

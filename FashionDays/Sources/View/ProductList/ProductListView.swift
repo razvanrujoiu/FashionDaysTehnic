@@ -12,12 +12,20 @@ struct ProductListView: View {
     @State private var viewModel = ProductListViewModel()
         
     var body: some View {
-        VStack {
-            Text("hello")
+        List {
+            ForEach(viewModel.products, id: \.self) { product in
+                VStack {
+                    Text(product.name)
+                    Text(product.brand)
+                    Text(String(product.price))
+                }
+            }.onMove(perform: { indices, newOffset in
+                viewModel.products.move(fromOffsets: indices, toOffset: newOffset)
+            })
         }
         .task {
             do {
-               try await viewModel.getProducts()
+                try await viewModel.getProducts()
             } catch {
                 print(error)
             }

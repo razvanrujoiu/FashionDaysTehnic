@@ -10,7 +10,7 @@ import Foundation
 final class ProductService: NetworkService {
 
     typealias RequestBody = Void
-    typealias ResponseModel = [ProductRemoteDataModel]
+    typealias ResponseModel = ProductsRemoteDataModel
     
     struct Parameters {
         let url: URL

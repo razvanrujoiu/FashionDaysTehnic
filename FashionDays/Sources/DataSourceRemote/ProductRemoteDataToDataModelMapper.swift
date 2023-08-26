@@ -9,12 +9,12 @@ import Foundation
 
 class ProductRemoteDataToDataModelMapper: Mapper {
     
-    typealias In = [ProductRemoteDataModel]
+    typealias In = ProductsRemoteDataModel
     typealias Out = [ProductDataModel]
     
     func map(_ value: In) -> Out {
         var output: [ProductDataModel] = []
-        for product in value {
+        for product in value.products {
             output.append(mapElement(product))
         }
         return output

@@ -7,8 +7,12 @@
 
 import Foundation
 
+struct ProductsRemoteDataModel: Decodable {
+    let products: [ProductRemoteDataModel]
+}
+
 struct ProductRemoteDataModel: Decodable {
-    let id: String
+    let id: Double
     let name: String
     let brand: String
     let price: Double
