@@ -13,7 +13,7 @@ public struct ProductPresentationModel: Hashable {
     public let brand: String
     public let price: Double
     public let originalPrice: Double
-    public let stockState: String
+    public let stockState: Bool
     public let imagesListing: [URL]
     public let imagesDetail: [URL]
     
@@ -22,7 +22,7 @@ public struct ProductPresentationModel: Hashable {
          brand: String,
          price: Double,
          originalPrice: Double,
-         stockState: String,
+         stockState: Bool,
          imagesListing: [URL],
          imagesDetail: [URL]) {
         self.id = id

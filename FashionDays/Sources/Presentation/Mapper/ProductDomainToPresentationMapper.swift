@@ -26,7 +26,7 @@ class ProductDomainToPresentationMapper: Mapper {
                      brand: value.brand,
                      price: value.price,
                      originalPrice: value.originalPrice,
-                     stockState: value.stockState,
+                     stockState: mapStockState(value.stockState),
                      imagesListing: mapImages(value.imagesListing),
                      imagesDetail: mapImages(value.imagesDetail))
     }
@@ -39,5 +39,9 @@ class ProductDomainToPresentationMapper: Mapper {
             }
         }
         return imagesUrls
+    }
+    
+    func mapStockState(_ value: String) -> Bool {
+        return value == "ok" ? true : false
     }
 }

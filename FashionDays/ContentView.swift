@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     var body: some View {
-        ProductListView()
+        ProductListCoordinatorView()
+            .background(Color.gray.opacity(0.2))
     }
 }
