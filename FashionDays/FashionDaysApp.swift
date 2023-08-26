@@ -6,17 +6,13 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct FashionDaysApp: App {
-    
-    init() {
-        
-    }
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
-        }
+        }.modelContainer(for: [ProductLocalDataModel.self])
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProductDetailView: View {
     
@@ -21,6 +22,15 @@ struct ProductDetailView: View {
     
     var body: some View {
         VStack {
+            Spacer().frame(height: 24)
+//            CarouselView(imageUrls: product.imagesDetail)
+            KFImage.url(product.imagesDetail.first)
+                .resizable()
+                .cacheMemoryOnly()
+                .aspectRatio(contentMode: .fill)
+                .frame(width: 200, height: 250)
+                .clipShape(.rect(cornerRadius: 12))
+                
             HStack {
                 VStack(alignment: .leading, spacing: 6) {
                     Text(product.name)
@@ -56,6 +66,7 @@ struct ProductDetailView: View {
                 }.padding(.all, 24)
                 Spacer()
             }
+            Spacer()
         }.navigationTitle(product.name)
         .toolbarTitleDisplayMode(.inline)
     }

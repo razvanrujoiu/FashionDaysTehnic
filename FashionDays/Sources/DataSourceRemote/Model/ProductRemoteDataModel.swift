@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct ProductsRemoteDataModel: Decodable {
+public struct ProductsRemoteDataModel: Decodable {
     let products: [ProductRemoteDataModel]
 }
 
-struct ProductRemoteDataModel: Decodable {
+public struct ProductRemoteDataModel: Decodable {
     let id: Double
     let name: String
     let brand: String
@@ -19,6 +19,22 @@ struct ProductRemoteDataModel: Decodable {
     let originalPrice: Double
     let stockState: String
     let images: ImagesDetail
+    
+    public init(id: Double,
+         name: String,
+         brand: String,
+         price: Double,
+         originalPrice: Double,
+         stockState: String,
+         images: ImagesDetail) {
+        self.id = id
+        self.name = name
+        self.brand = brand
+        self.price = price
+        self.originalPrice = originalPrice
+        self.stockState = stockState
+        self.images = images
+    }
     
     private enum CodingKeys : String, CodingKey {
         case id = "product_id"
@@ -30,8 +46,13 @@ struct ProductRemoteDataModel: Decodable {
         case images = "product_images"
     }
     
-    struct ImagesDetail: Decodable {
+    public struct ImagesDetail: Decodable {
         let listing: [String]
         let detail: [String]
+        
+        public init(listing: [String], detail: [String]) {
+            self.listing = listing
+            self.detail = detail
+        }
     }
 }

@@ -1,28 +1,26 @@
 //
-//  ProductDataToDomainMapper.swift
+//  ProductDataToLocalModelMapper.swift
 //  FashionDays
 //
-//  Created by Razvan Rujoiu on 25.08.2023.
+//  Created by Razvan Rujoiu on 26.08.2023.
 //
 
 import Foundation
 
-final public class ProductDataToDomainMapper: Mapper {
+class ProductDataToLocalModelMapper: Mapper {
     
-    public typealias In = [ProductDataModel]
-    public typealias Out = [ProductDomainModel]
+    typealias In = [ProductDataModel]
+    typealias Out = [ProductLocalDataModel]
     
-    public init() {}
-    
-    public func map(_ value: In) -> Out {
-        var output: [ProductDomainModel] = []
+    func map(_ value: In) -> Out {
+        var output: [ProductLocalDataModel] = []
         for product in value {
             output.append(mapElement(product))
         }
         return output
     }
     
-    public func mapElement(_ value: ProductDataModel) -> ProductDomainModel {
+    func mapElement(_ value: ProductDataModel) -> ProductLocalDataModel {
         return .init(id: value.id,
                      name: value.name,
                      brand: value.brand,

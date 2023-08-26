@@ -17,7 +17,7 @@ public struct ProductDomainModel {
     public let imagesListing: [String]
     public let imagesDetail: [String]
     
-    init(id: Double,
+    public init(id: Double,
          name: String,
          brand: String,
          price: Double,

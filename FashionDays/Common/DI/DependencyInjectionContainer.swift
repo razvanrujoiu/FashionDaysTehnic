@@ -21,12 +21,22 @@ func buildContainer() -> Container {
     container.register(ProductDomainToPresentationMapper.self) { _ in
         ProductDomainToPresentationMapper()
     }.inObjectScope(.container)
+    container.register(ProductLocalToDataModelMapper.self) { _ in
+        ProductLocalToDataModelMapper()
+    }.inObjectScope(.container)
+    container.register(ProductDataToLocalModelMapper.self) { _ in
+        ProductDataToLocalModelMapper()
+    }.inObjectScope(.container)
     
     // MARK: - DataSources
     container.register(ProductDataSourceType.self) { _ in
         ProductRemoteDataSource()
     }.inObjectScope(.container)
     
+    container.register(ProductLocalDataSourceType.self) { _ in
+        ProductLocalDataSource()
+    }.inObjectScope(.container)
+        
     container.register(ProductRepositoryType.self) { _ in
         ProductDataRepository()
     }.inObjectScope(.container)

@@ -20,8 +20,9 @@ struct ProductItemCell: View {
                     KFImage.url(product.imagesListing.first)
                         .resizable()
                         .cacheMemoryOnly()
+                        .aspectRatio(contentMode: .fill)
                         .frame(width: 80, height: 100)
-                        .clipShape(.rect(cornerSize: CGSize(width: 12, height: 12)))
+                        .clipShape(.rect(cornerRadius: 12))
                         .padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 0))
                     VStack(alignment: .leading) {
                         Spacer()

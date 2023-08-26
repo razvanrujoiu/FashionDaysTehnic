@@ -6,9 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ProductListView: View {
     
+    @Environment(\.modelContext) private var context
+    @Query private var localProducts: [ProductLocalDataModel]
     @Environment(ProductListCoordinator.self) private var coordinator
     @State private var viewModel = ProductListViewModel()
       
@@ -29,7 +32,10 @@ struct ProductListView: View {
         }
         .navigationTitle("Fashion Days")
         .task {
-            await viewModel.getProducts()
+            if localProducts.isEmpty {
+                await viewModel.getProducts()
+                
+            }
         }
     }
 }

@@ -7,12 +7,14 @@
 
 import Foundation
 
-class ProductRemoteDataToDataModelMapper: Mapper {
+public class ProductRemoteDataToDataModelMapper: Mapper {
     
-    typealias In = ProductsRemoteDataModel
-    typealias Out = [ProductDataModel]
+    public typealias In = ProductsRemoteDataModel
+    public typealias Out = [ProductDataModel]
     
-    func map(_ value: In) -> Out {
+    public init() { }
+    
+    public func map(_ value: In) -> Out {
         var output: [ProductDataModel] = []
         for product in value.products {
             output.append(mapElement(product))
@@ -20,7 +22,7 @@ class ProductRemoteDataToDataModelMapper: Mapper {
         return output
     }
     
-    func mapElement(_ value: ProductRemoteDataModel) -> ProductDataModel {
+    public func mapElement(_ value: ProductRemoteDataModel) -> ProductDataModel {
         return .init(id: value.id,
                      name: value.name,
                      brand: value.brand,

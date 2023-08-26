@@ -35,8 +35,4 @@ class ProductListViewModel: ProductListViewModelType {
             self.loadingState = .failed(error: error)
         }
     }
-    
-//    func pushDetail(product: ProductPresentationModel) {
-//        coordinator.push(page: .productDetail(product: product))
-//    }
 }
