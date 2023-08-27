@@ -1,0 +1,56 @@
+{
+    "products": [
+        {
+            "stamps": [
+                {
+                    "cluster_id": 1,
+                    "text_color": "#000000",
+                    "background_color": "#F7F7F7",
+                    "opacity": 80,
+                    "template": "horizontal_bottom",
+                    "label": "SUSTENABIL"
+                }
+            ],
+            "product_id": 4726850,
+            "product_name": "Colanti cu tehnologie Dri-Fit si talie inalta pentru fitness One",
+            "product_images": {
+                "listing": [
+                    "https://fdcdn.akamaized.net/m/160x240/products/42235/42234530/images/res_700a9d74ae41f694ef391d3cfbe0a62a.jpg?s=2pdRuTtZa4sq",
+                    "https://fdcdn.akamaized.net/m/160x240/products/42235/42234530/images/res_49add62414c0b46bb24518cac9b4b39f.jpg?s=V9AAiAHcz7zN"
+                ],
+                "detail": [
+                    "https://fdcdn.akamaized.net/m/250x375/products/42235/42234530/images/res_700a9d74ae41f694ef391d3cfbe0a62a.jpg?s=oXGChrPIRQBV",
+                    "https://fdcdn.akamaized.net/m/250x375/products/42235/42234530/images/res_49add62414c0b46bb24518cac9b4b39f.jpg?s=PdcL8YIWKOSg"
+                ],
+                "zoom": [
+                    "https://fdcdn.akamaized.net/m/390x585/products/42235/42234530/images/res_700a9d74ae41f694ef391d3cfbe0a62a.jpg?s=2haYaiYHxPAi",
+                    "https://fdcdn.akamaized.net/m/390x585/products/42235/42234530/images/res_49add62414c0b46bb24518cac9b4b39f.jpg?s=ZJDR9yMhZw21"
+                ],
+                "thumb": [
+                    "https://fdcdn.akamaized.net/m/80x120/products/42235/42234530/images/res_700a9d74ae41f694ef391d3cfbe0a62a.jpg?s=UiO-5wqygKWP",
+                    "https://fdcdn.akamaized.net/m/80x120/products/42235/42234530/images/res_49add62414c0b46bb24518cac9b4b39f.jpg?s=tkhP10IY5KG6"
+                ]
+            },
+            "product_price": 104.99,
+            "product_original_price": 234.99,
+            "product_type": "configurable",
+            "product_stock_state": "ok",
+            "product_brand": "Nike",
+            "product_brand_id": 5991,
+            "product_tag_id": 1,
+            "sku": "DM7278-068",
+            "discount_type": "percentual",
+            "hv": 0,
+            "has_vrs": 1,
+            "classification_name": "CLOTHING",
+            "classification": "CLOTHING",
+            "classification_id": "4",
+            "sub_classification": "PANTS",
+            "sub_classification_id": "43",
+            "tag_name": "women",
+            "product_is_new": 0,
+            "product_discount": 55,
+            "screen_title": "Colanti cu tehnologie Dri-Fit si talie inalta pentru fitness One - Nike (DM7278-068)"
+        }
+    ]
+}

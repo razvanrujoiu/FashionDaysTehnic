@@ -17,7 +17,6 @@ class ProductDataRepository: ProductDataRepositoryType {
     @Inject private var dataSource: ProductDataSourceType
     @Inject private var localDataSource: ProductLocalDataSourceType
     
-    
     func requestDataProducts() async throws -> [ProductDataModel] {
         try await dataSource.getProducts()
     }

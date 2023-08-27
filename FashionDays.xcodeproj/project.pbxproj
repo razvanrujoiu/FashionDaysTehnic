@@ -59,6 +59,15 @@
 		E3C3F5982A9A8B5200D4E0C1 /* ProductRemoteDataModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5972A9A8B5200D4E0C1 /* ProductRemoteDataModelStub.swift */; };
 		E3C3F59A2A9A8C3E00D4E0C1 /* ProductDomainModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5992A9A8C3E00D4E0C1 /* ProductDomainModelStub.swift */; };
 		E3C3F59E2A9A8DF900D4E0C1 /* ProductRemoteDataToDataMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F59D2A9A8DF900D4E0C1 /* ProductRemoteDataToDataMapperTests.swift */; };
+		E3C3F5A02A9A8F4500D4E0C1 /* ProductPresentationDataModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F59F2A9A8F4500D4E0C1 /* ProductPresentationDataModelStub.swift */; };
+		E3C3F5A32A9A911F00D4E0C1 /* ProductDomainToPresentationMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5A22A9A911F00D4E0C1 /* ProductDomainToPresentationMapperTests.swift */; };
+		E3C3F5A62A9A924400D4E0C1 /* ProductDataRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5A52A9A924400D4E0C1 /* ProductDataRepositoryMock.swift */; };
+		E3C3F5A82A9A9A6300D4E0C1 /* ProductDataRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5A72A9A9A6300D4E0C1 /* ProductDataRepositoryTests.swift */; };
+		E3C3F5AA2A9AA83500D4E0C1 /* CoreNetworkingAPIMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5A92A9AA83500D4E0C1 /* CoreNetworkingAPIMock.swift */; };
+		E3C3F5AF2A9B433700D4E0C1 /* ProductResponse.json in Resources */ = {isa = PBXBuildFile; fileRef = E3C3F5AE2A9B433700D4E0C1 /* ProductResponse.json */; };
+		E3C3F5B12A9B53AA00D4E0C1 /* ProductRemoteDataSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5B02A9B53AA00D4E0C1 /* ProductRemoteDataSourceTests.swift */; };
+		E3C3F5B32A9B544600D4E0C1 /* ProductServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5B22A9B544600D4E0C1 /* ProductServiceMock.swift */; };
+		E3C3F5B52A9B550500D4E0C1 /* ProductRemoteDataSourceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5B42A9B550500D4E0C1 /* ProductRemoteDataSourceMock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +130,15 @@
 		E3C3F5972A9A8B5200D4E0C1 /* ProductRemoteDataModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteDataModelStub.swift; sourceTree = "<group>"; };
 		E3C3F5992A9A8C3E00D4E0C1 /* ProductDomainModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDomainModelStub.swift; sourceTree = "<group>"; };
 		E3C3F59D2A9A8DF900D4E0C1 /* ProductRemoteDataToDataMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteDataToDataMapperTests.swift; sourceTree = "<group>"; };
+		E3C3F59F2A9A8F4500D4E0C1 /* ProductPresentationDataModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentationDataModelStub.swift; sourceTree = "<group>"; };
+		E3C3F5A22A9A911F00D4E0C1 /* ProductDomainToPresentationMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDomainToPresentationMapperTests.swift; sourceTree = "<group>"; };
+		E3C3F5A52A9A924400D4E0C1 /* ProductDataRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataRepositoryMock.swift; sourceTree = "<group>"; };
+		E3C3F5A72A9A9A6300D4E0C1 /* ProductDataRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataRepositoryTests.swift; sourceTree = "<group>"; };
+		E3C3F5A92A9AA83500D4E0C1 /* CoreNetworkingAPIMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreNetworkingAPIMock.swift; sourceTree = "<group>"; };
+		E3C3F5AE2A9B433700D4E0C1 /* ProductResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ProductResponse.json; sourceTree = "<group>"; };
+		E3C3F5B02A9B53AA00D4E0C1 /* ProductRemoteDataSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteDataSourceTests.swift; sourceTree = "<group>"; };
+		E3C3F5B22A9B544600D4E0C1 /* ProductServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductServiceMock.swift; sourceTree = "<group>"; };
+		E3C3F5B42A9B550500D4E0C1 /* ProductRemoteDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteDataSourceMock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -538,6 +556,8 @@
 		E3C3F58A2A9A820400D4E0C1 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				E3C3F5AB2A9B3F1A00D4E0C1 /* Networking */,
+				E3C3F5A42A9A921A00D4E0C1 /* Data */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -545,6 +565,7 @@
 		E3C3F58B2A9A820C00D4E0C1 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				E3C3F5A12A9A8FB600D4E0C1 /* Presentation */,
 				E3C3F59C2A9A8DDE00D4E0C1 /* RemoteData */,
 				E3C3F59B2A9A8DD100D4E0C1 /* Domain */,
 				E3C3F58C2A9A821F00D4E0C1 /* Data */,
@@ -556,6 +577,7 @@
 			isa = PBXGroup;
 			children = (
 				E3C3F5922A9A86F900D4E0C1 /* ProductDataToDomainMapperTests.swift */,
+				E3C3F5A72A9A9A6300D4E0C1 /* ProductDataRepositoryTests.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -566,6 +588,7 @@
 				E3C3F5952A9A8AA900D4E0C1 /* ProductDataModelStub.swift */,
 				E3C3F5972A9A8B5200D4E0C1 /* ProductRemoteDataModelStub.swift */,
 				E3C3F5992A9A8C3E00D4E0C1 /* ProductDomainModelStub.swift */,
+				E3C3F59F2A9A8F4500D4E0C1 /* ProductPresentationDataModelStub.swift */,
 			);
 			path = Stubs;
 			sourceTree = "<group>";
@@ -581,8 +604,36 @@
 			isa = PBXGroup;
 			children = (
 				E3C3F59D2A9A8DF900D4E0C1 /* ProductRemoteDataToDataMapperTests.swift */,
+				E3C3F5B02A9B53AA00D4E0C1 /* ProductRemoteDataSourceTests.swift */,
 			);
 			path = RemoteData;
+			sourceTree = "<group>";
+		};
+		E3C3F5A12A9A8FB600D4E0C1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				E3C3F5A22A9A911F00D4E0C1 /* ProductDomainToPresentationMapperTests.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		E3C3F5A42A9A921A00D4E0C1 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E3C3F5A52A9A924400D4E0C1 /* ProductDataRepositoryMock.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		E3C3F5AB2A9B3F1A00D4E0C1 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E3C3F5A92A9AA83500D4E0C1 /* CoreNetworkingAPIMock.swift */,
+				E3C3F5AE2A9B433700D4E0C1 /* ProductResponse.json */,
+				E3C3F5B22A9B544600D4E0C1 /* ProductServiceMock.swift */,
+				E3C3F5B42A9B550500D4E0C1 /* ProductRemoteDataSourceMock.swift */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -688,6 +739,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3C3F5AF2A9B433700D4E0C1 /* ProductResponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -745,11 +797,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3C3F5B12A9B53AA00D4E0C1 /* ProductRemoteDataSourceTests.swift in Sources */,
 				E3C3F59E2A9A8DF900D4E0C1 /* ProductRemoteDataToDataMapperTests.swift in Sources */,
+				E3C3F5AA2A9AA83500D4E0C1 /* CoreNetworkingAPIMock.swift in Sources */,
+				E3C3F5B32A9B544600D4E0C1 /* ProductServiceMock.swift in Sources */,
 				E3C3F5982A9A8B5200D4E0C1 /* ProductRemoteDataModelStub.swift in Sources */,
+				E3C3F5A82A9A9A6300D4E0C1 /* ProductDataRepositoryTests.swift in Sources */,
+				E3C3F5A32A9A911F00D4E0C1 /* ProductDomainToPresentationMapperTests.swift in Sources */,
 				E3C3F5932A9A86F900D4E0C1 /* ProductDataToDomainMapperTests.swift in Sources */,
 				E3C3F5962A9A8AA900D4E0C1 /* ProductDataModelStub.swift in Sources */,
+				E3C3F5B52A9B550500D4E0C1 /* ProductRemoteDataSourceMock.swift in Sources */,
 				E3C3F59A2A9A8C3E00D4E0C1 /* ProductDomainModelStub.swift in Sources */,
+				E3C3F5A02A9A8F4500D4E0C1 /* ProductPresentationDataModelStub.swift in Sources */,
+				E3C3F5A62A9A924400D4E0C1 /* ProductDataRepositoryMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,17 +8,17 @@
 import Foundation
 
 public struct ProductsRemoteDataModel: Decodable {
-    let products: [ProductRemoteDataModel]
+    public let products: [ProductRemoteDataModel]
 }
 
 public struct ProductRemoteDataModel: Decodable {
-    let id: Double
-    let name: String
-    let brand: String
-    let price: Double
-    let originalPrice: Double
-    let stockState: String
-    let images: ImagesDetail
+    public let id: Double
+    public let name: String
+    public let brand: String
+    public let price: Double
+    public let originalPrice: Double
+    public let stockState: String
+    public let images: ImagesDetail
     
     public init(id: Double,
          name: String,
@@ -47,8 +47,8 @@ public struct ProductRemoteDataModel: Decodable {
     }
     
     public struct ImagesDetail: Decodable {
-        let listing: [String]
-        let detail: [String]
+        public let listing: [String]
+        public let detail: [String]
         
         public init(listing: [String], detail: [String]) {
             self.listing = listing

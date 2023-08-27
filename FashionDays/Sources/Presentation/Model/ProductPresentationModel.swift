@@ -17,7 +17,7 @@ public struct ProductPresentationModel: Hashable {
     public let imagesListing: [URL]
     public let imagesDetail: [URL]
     
-    init(id: Double,
+    public init(id: Double,
          name: String,
          brand: String,
          price: Double,

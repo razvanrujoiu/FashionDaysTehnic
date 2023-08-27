@@ -7,14 +7,14 @@
 
 import Foundation
 
-typealias HTTPHeaders = [String: String]
+public typealias HTTPHeaders = [String: String]
 
 public struct ApiEndpoint {
-    var url: URL
-    let headers: HTTPHeaders?
-    let method: HTTPMethod
+    public var url: URL
+    public let headers: HTTPHeaders?
+    public let method: HTTPMethod
     
-    init(url: URL, headers: HTTPHeaders?, method: HTTPMethod) {
+    public init(url: URL, headers: HTTPHeaders?, method: HTTPMethod) {
         self.url = url
         self.headers = headers
         self.method = method

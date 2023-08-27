@@ -8,12 +8,6 @@
 import Foundation
 import Foundation
 
-
-protocol NetworkSession {
-    
-    func dataTask<ResponseModel>(with request: URLRequest) async throws -> ResponseModel where ResponseModel: Decodable
-}
-
 public protocol CoreNetworkingAPIProtocol: AnyObject {
     func request<ResponseModel>(urlRequest: URLRequest) async throws -> ResponseModel where ResponseModel: Decodable
 }

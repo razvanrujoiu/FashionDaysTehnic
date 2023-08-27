@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol ProductRemoteDataSourceType {
+public protocol ProductRemoteDataSourceType {
     func getRemoteProducts() async throws -> ProductsRemoteDataModel
 }
 
