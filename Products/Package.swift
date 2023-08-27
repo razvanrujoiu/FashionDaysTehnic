@@ -27,9 +27,15 @@ let package = Package(
             dependencies: ["Swinject",
                            "SwinjectAutoregistration",
                            "Kingfisher",
-                           "Common"]),
+                           "Common"],
+            resources: [
+                .copy("ProductResponse.json")
+            ]),
         .testTarget(
             name: "ProductsTests",
-            dependencies: ["Products"]),
+            dependencies: ["Products"],
+            resources: [
+                .copy("ProductResponse.json")
+            ])
     ]
 )

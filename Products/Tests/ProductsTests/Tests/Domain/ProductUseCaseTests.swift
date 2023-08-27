@@ -7,7 +7,6 @@
 
 import Foundation
 import XCTest
-import FashionDays
 
 final class ProductUseCaseTests: XCTestCase {
     

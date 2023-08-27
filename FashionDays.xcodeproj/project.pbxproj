@@ -19,19 +19,7 @@
 		E3C3F5B92A9B6EA300D4E0C1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E3C3F5B82A9B6EA300D4E0C1 /* Lottie */; };
 		E3C3F5DA2A9BBEFE00D4E0C1 /* Products in Frameworks */ = {isa = PBXBuildFile; productRef = E3C3F5D92A9BBEFE00D4E0C1 /* Products */; };
 		E3C3F5E22A9BC91C00D4E0C1 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = E3C3F5E12A9BC91C00D4E0C1 /* Common */; };
-		E3C3F5F12A9BCDD000D4E0C1 /* Products in Frameworks */ = {isa = PBXBuildFile; productRef = E3C3F5F02A9BCDD000D4E0C1 /* Products */; };
-		E3D6FB992A9BCF41008D8A87 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = E3D6FB982A9BCF41008D8A87 /* Common */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		E3C3F5842A9A81DE00D4E0C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = E3C3F4A02A990D0D00D4E0C1 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E3C3F4A72A990D0D00D4E0C1;
-			remoteInfo = FashionDays;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		E3C3F4A82A990D0D00D4E0C1 /* FashionDays.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FashionDays.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -39,7 +27,6 @@
 		E3C3F4AD2A990D0D00D4E0C1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E3C3F4AF2A990D0E00D4E0C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3C3F4B22A990D0E00D4E0C1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		E3C3F5802A9A81DE00D4E0C1 /* FashionDaysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FashionDaysTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C3F5D72A9BBE7D00D4E0C1 /* Products */ = {isa = PBXFileReference; lastKnownFileType = text; path = Products; sourceTree = SOURCE_ROOT; };
 		E3C3F5DB2A9BC75200D4E0C1 /* Common */ = {isa = PBXFileReference; lastKnownFileType = text; path = Common; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -60,15 +47,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3C3F57D2A9A81DE00D4E0C1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E3C3F5F12A9BCDD000D4E0C1 /* Products in Frameworks */,
-				E3D6FB992A9BCF41008D8A87 /* Common in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -76,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				E3C3F4AA2A990D0D00D4E0C1 /* FashionDays */,
-				E3C3F5812A9A81DE00D4E0C1 /* FashionDaysTests */,
 				E3C3F4A92A990D0D00D4E0C1 /* Products */,
 				E3C3F5D82A9BBEFE00D4E0C1 /* Frameworks */,
 			);
@@ -86,7 +63,6 @@
 			isa = PBXGroup;
 			children = (
 				E3C3F4A82A990D0D00D4E0C1 /* FashionDays.app */,
-				E3C3F5802A9A81DE00D4E0C1 /* FashionDaysTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -110,13 +86,6 @@
 				E3C3F4B22A990D0E00D4E0C1 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		E3C3F5812A9A81DE00D4E0C1 /* FashionDaysTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FashionDaysTests;
 			sourceTree = "<group>";
 		};
 		E3C3F5D82A9BBEFE00D4E0C1 /* Frameworks */ = {
@@ -156,28 +125,6 @@
 			productReference = E3C3F4A82A990D0D00D4E0C1 /* FashionDays.app */;
 			productType = "com.apple.product-type.application";
 		};
-		E3C3F57F2A9A81DE00D4E0C1 /* FashionDaysTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = E3C3F5862A9A81DE00D4E0C1 /* Build configuration list for PBXNativeTarget "FashionDaysTests" */;
-			buildPhases = (
-				E3C3F57C2A9A81DE00D4E0C1 /* Sources */,
-				E3C3F57D2A9A81DE00D4E0C1 /* Frameworks */,
-				E3C3F57E2A9A81DE00D4E0C1 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				E3C3F5852A9A81DE00D4E0C1 /* PBXTargetDependency */,
-			);
-			name = FashionDaysTests;
-			packageProductDependencies = (
-				E3C3F5F02A9BCDD000D4E0C1 /* Products */,
-				E3D6FB982A9BCF41008D8A87 /* Common */,
-			);
-			productName = FashionDaysTests;
-			productReference = E3C3F5802A9A81DE00D4E0C1 /* FashionDaysTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -190,11 +137,6 @@
 				TargetAttributes = {
 					E3C3F4A72A990D0D00D4E0C1 = {
 						CreatedOnToolsVersion = 15.0;
-					};
-					E3C3F57F2A9A81DE00D4E0C1 = {
-						CreatedOnToolsVersion = 15.0;
-						LastSwiftMigration = 1500;
-						TestTargetID = E3C3F4A72A990D0D00D4E0C1;
 					};
 				};
 			};
@@ -218,7 +160,6 @@
 			projectRoot = "";
 			targets = (
 				E3C3F4A72A990D0D00D4E0C1 /* FashionDays */,
-				E3C3F57F2A9A81DE00D4E0C1 /* FashionDaysTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,13 +171,6 @@
 			files = (
 				E3C3F4B32A990D0E00D4E0C1 /* Preview Assets.xcassets in Resources */,
 				E3C3F4B02A990D0E00D4E0C1 /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		E3C3F57E2A9A81DE00D4E0C1 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,22 +186,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E3C3F57C2A9A81DE00D4E0C1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		E3C3F5852A9A81DE00D4E0C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = E3C3F4A72A990D0D00D4E0C1 /* FashionDays */;
-			targetProxy = E3C3F5842A9A81DE00D4E0C1 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		E3C3F4B42A990D0E00D4E0C1 /* Debug */ = {
@@ -447,45 +366,6 @@
 			};
 			name = Release;
 		};
-		E3C3F5872A9A81DE00D4E0C1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H55V68K4TY;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.razvanrujoiu.FashionDaysTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FashionDays.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FashionDays";
-			};
-			name = Debug;
-		};
-		E3C3F5882A9A81DE00D4E0C1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = H55V68K4TY;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.razvanrujoiu.FashionDaysTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FashionDays.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FashionDays";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -503,15 +383,6 @@
 			buildConfigurations = (
 				E3C3F4B72A990D0E00D4E0C1 /* Debug */,
 				E3C3F4B82A990D0E00D4E0C1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		E3C3F5862A9A81DE00D4E0C1 /* Build configuration list for PBXNativeTarget "FashionDaysTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				E3C3F5872A9A81DE00D4E0C1 /* Debug */,
-				E3C3F5882A9A81DE00D4E0C1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -589,14 +460,6 @@
 			productName = Products;
 		};
 		E3C3F5E12A9BC91C00D4E0C1 /* Common */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Common;
-		};
-		E3C3F5F02A9BCDD000D4E0C1 /* Products */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Products;
-		};
-		E3D6FB982A9BCF41008D8A87 /* Common */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Common;
 		};

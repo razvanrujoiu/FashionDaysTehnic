@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import FashionDays
 import Products
 
 public let productDataModelStub = ProductDataModel(id: 123,
