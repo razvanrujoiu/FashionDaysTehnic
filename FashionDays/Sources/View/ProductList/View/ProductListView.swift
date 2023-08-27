@@ -32,10 +32,13 @@ struct ProductListView: View {
             case .success:
                 List {
                     if searchResults.isEmpty {
-                        Text("No results found")
-                            .font(.system(size: 22))
-                            .fontWeight(.bold)
-                            .foregroundStyle(.black.opacity(0.7))
+                        HStack {
+                            LottieView(lottieFile: "no_results_animation").frame(width: 44, height: 44)
+                            Text("No results found")
+                                .font(.system(size: 22))
+                                .fontWeight(.bold)
+                                .foregroundStyle(.black.opacity(0.7))
+                        }
                     } else {
                         ForEach(searchResults, id: \.self) { product in
                             ProductItemCell(product: product) {
