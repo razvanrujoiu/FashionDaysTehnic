@@ -10,11 +10,18 @@ import SwiftData
 
 struct ProductListView: View {
     
-    @Environment(\.modelContext) private var context
-    @Query private var localProducts: [ProductLocalDataModel]
     @Environment(ProductListCoordinator.self) private var coordinator
     @State private var viewModel = ProductListViewModel()
-      
+    @State private var searchText: String = ""
+    
+    var searchResults: [ProductPresentationModel] {
+        if searchText.isEmpty {
+            return viewModel.products
+        } else {
+            return viewModel.products.filter { $0.name.lowercased().contains(searchText.lowercased()) }
+        }
+    }
+    
     var body: some View {
         VStack {
             switch viewModel.loadingState {
@@ -24,21 +31,29 @@ struct ProductListView: View {
                 ProgressView()
             case .success:
                 List {
-                    ForEach(viewModel.products, id: \.self) { product in
-                        ProductItemCell(product: product) {
-                            coordinator.push(page: .productDetail(product: product))
-                        }.listRowSeparator(.hidden)
-                            .listRowBackground(Color.gray.opacity(0.2))
+                    if searchResults.isEmpty {
+                        Text("No results found")
+                            .font(.system(size: 22))
+                            .fontWeight(.bold)
+                            .foregroundStyle(.black.opacity(0.7))
+                    } else {
+                        ForEach(searchResults, id: \.self) { product in
+                            ProductItemCell(product: product) {
+                                coordinator.push(page: .productDetail(product: product))
+                            }.listRowSeparator(.hidden)
+                                .listRowBackground(Color.gray.opacity(0.2))
+                        }
+                        .onMove(perform: { indices, newOffset in
+                            viewModel.products.move(fromOffsets: indices, toOffset: newOffset)
+                        })
                     }
-                    .onMove(perform: { indices, newOffset in
-                        viewModel.products.move(fromOffsets: indices, toOffset: newOffset)
-                    })
                 }
                 .refreshable {
                     Task {
                         await viewModel.getProducts()
                     }
                 }
+                .searchable(text: $searchText)
                 .listStyle(.plain)
                 .scrollIndicators(.hidden)
             case .failed(let error):
@@ -60,10 +75,7 @@ struct ProductListView: View {
         }
         .navigationTitle("Fashion Days")
         .task {
-            if localProducts.isEmpty {
-                await viewModel.getProducts()
-                
-            }
+            await viewModel.getProducts()
         }
     }
 }

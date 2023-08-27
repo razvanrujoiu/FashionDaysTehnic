@@ -28,8 +28,8 @@ func notFoundHttpURLResponse(request: URLRequest) -> URLResponse {
 
 public class URLSessionMock {
     
-    // Properties that enable us to set exactly what data and response
-    // we want our mocked URLSession to return for any request.
+    /// Properties that enable us to set exactly what data and response
+    /// we want our mocked URLSession to return for any request.
     var data: Data?
     var response: URLResponse?
     
@@ -38,6 +38,9 @@ public class URLSessionMock {
         self.response = response
     }
 
+    /// The `URLSessionMock` should have extended `URLSession` and override the `data` function
+    /// but `data` function isn't an open function like `dataTask` so i have created a function with the same
+    /// definition for now
     public func data(for request: URLRequest) async throws -> (Data, URLResponse) {
         let data = loadJsonData(file: "ProductResponse")
         return (data!, response!)
