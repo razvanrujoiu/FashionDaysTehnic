@@ -26,20 +26,6 @@ func notFoundHttpURLResponse(request: URLRequest) -> URLResponse {
                            httpVersion: "HTTP/1.1", headerFields: nil)!
 }
 
-enum MockJsons: String {
-    case productResponse = "ProductResponse.json"
-
-    var url: URL {
-        let thisSourceFile = URL(fileURLWithPath: #file)
-        let thisDirectory = thisSourceFile.deletingLastPathComponent()
-        return thisDirectory.appendingPathComponent("\(self.rawValue)")
-    }
-
-    func getData() throws -> Data {
-        return try Data(contentsOf: self.url)
-    }
-}
-
 public class URLSessionMock {
     
     /// Properties that enable us to set exactly what data and response
@@ -56,7 +42,8 @@ public class URLSessionMock {
     /// but `data` function isn't an open function like `dataTask` so i have created a function with the same
     /// definition for now
     public func data(for request: URLRequest) async throws -> (Data, URLResponse) {
-        let data = try MockJsons.productResponse.getData()
+        let url = Bundle.module.url(forResource: "ProductResponse", withExtension: "json")
+        let data = try Data(contentsOf: url!)
         return (data, response!)
     }
 }

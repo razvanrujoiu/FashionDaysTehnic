@@ -16,14 +16,17 @@ let package = Package(
         .package(url: "https://github.com/Swinject/Swinject", from: "2.8.3"),
         .package(url: "https://github.com/Swinject/SwinjectAutoregistration", from: "2.8.3"),
         .package(url: "https://github.com/onevcat/Kingfisher.git", from: "7.9.1"),
-        .package(url: "https://github.com/airbnb/lottie-ios", from: "4.2.0")
+        .package(url: "https://github.com/airbnb/lottie-ios", from: "4.2.0"),
+    
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
         .target(
             name: "Common",
-            dependencies: ["Swinject", "SwinjectAutoregistration", "Kingfisher"]),
+            dependencies: ["Swinject",
+                           "SwinjectAutoregistration",
+                           "Kingfisher"]),
         .testTarget(
             name: "CommonTests",
             dependencies: ["Common"]),
