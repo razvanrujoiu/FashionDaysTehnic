@@ -556,6 +556,7 @@
 		E3C3F58A2A9A820400D4E0C1 /* Mocks */ = {
 			isa = PBXGroup;
 			children = (
+				E3C3F5B62A9B631300D4E0C1 /* RemoteData */,
 				E3C3F5AB2A9B3F1A00D4E0C1 /* Networking */,
 				E3C3F5A42A9A921A00D4E0C1 /* Data */,
 			);
@@ -630,10 +631,17 @@
 			children = (
 				E3C3F5A92A9AA83500D4E0C1 /* CoreNetworkingAPIMock.swift */,
 				E3C3F5AE2A9B433700D4E0C1 /* ProductResponse.json */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		E3C3F5B62A9B631300D4E0C1 /* RemoteData */ = {
+			isa = PBXGroup;
+			children = (
 				E3C3F5B22A9B544600D4E0C1 /* ProductServiceMock.swift */,
 				E3C3F5B42A9B550500D4E0C1 /* ProductRemoteDataSourceMock.swift */,
 			);
-			path = Networking;
+			path = RemoteData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

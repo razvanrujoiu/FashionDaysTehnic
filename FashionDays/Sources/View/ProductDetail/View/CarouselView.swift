@@ -12,6 +12,8 @@ import Kingfisher
 struct CarouselView: View {
     
     var imageUrls: [URL]
+    @State private var currentIndex: Int = 0
+    @GestureState private var dragOffset: CGFloat = 0
     
     init(imageUrls: [URL]) {
         self.imageUrls = imageUrls
@@ -19,31 +21,32 @@ struct CarouselView: View {
     
     var body: some View {
         VStack {
-            GeometryReader(content: { geometry in
-                let size = geometry.size
-                ScrollView(.horizontal) {
-                    HStack(spacing: 10) {
-                        ForEach(imageUrls, id: \.self) { imageUrl in
-                            GeometryReader(content: { proxy in
-                                let cardSize = proxy.size
-                                KFImage.url(imageUrl)
-                                    .resizable()
-                                    .cacheMemoryOnly()
-                                    .aspectRatio(contentMode: .fill)
-                                    .frame(width: cardSize.width, height: cardSize.height, alignment: .center)
-                                    .clipShape(.rect(cornerRadius: 12))
-                            })
-                            .frame(width: size.width, height: size.height)
-                            .padding(.horizontal, 24)
-                                .scrollTransition(.interactive, axis: .horizontal) { view, phase in
-                                    view.scaleEffect(phase.isIdentity ? 1 : 0.9)
-                                }
+            ZStack {
+                ForEach(0..<imageUrls.count, id: \.self) { index in
+                    KFImage.url(imageUrls[index])
+                        .resizable()
+                        .cacheMemoryOnly()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: 275, height: 350)
+                        .clipShape(.rect(cornerRadius: 12))
+                        .opacity(currentIndex == index ? 1.0 : 0.5)
+                        .scaleEffect(currentIndex == index ? 1.0 : 0.9)
+                        .offset(x: CGFloat(index - currentIndex) * 285 + dragOffset, y: 0)
+                }
+            }.gesture(
+                DragGesture().onEnded({ value in
+                    let treshhold: CGFloat = 50
+                    if value.translation.width > treshhold {
+                        withAnimation {
+                            currentIndex = max(0, currentIndex - 1)
+                        }
+                    } else if value.translation.width < -treshhold {
+                        withAnimation {
+                            currentIndex = min(imageUrls.count - 1, currentIndex + 1)
                         }
                     }
-                }
-                .scrollTargetBehavior(.viewAligned)
-                .scrollIndicators(.hidden)
-            }).frame(height: 300)
+                })
+            )
         }
     }
 }
