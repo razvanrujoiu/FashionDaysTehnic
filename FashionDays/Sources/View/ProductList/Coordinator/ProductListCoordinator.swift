@@ -44,5 +44,6 @@ struct ProductListCoordinatorView: View {
                     coordinator.build(page: page)
                 }
         }.environment(coordinator)
+        .tint(.black)
     }
 }
