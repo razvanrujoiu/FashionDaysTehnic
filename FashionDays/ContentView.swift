@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Products
 
 struct ContentView: View {
     

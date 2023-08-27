@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import Products
 
 @main
 struct FashionDaysApp: App {
