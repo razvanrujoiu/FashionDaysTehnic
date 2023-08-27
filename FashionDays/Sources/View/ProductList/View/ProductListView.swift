@@ -21,7 +21,6 @@ struct ProductListView: View {
     @Inject private var localToPresentationMapper: ProductLocalToPresentationMapper
     @Inject private var presentationToLocalMapper: ProductPresentationToLocalProductMapper
     
-    
     var searchResults: [ProductPresentationModel] {
         if searchText.isEmpty {
             return viewModel.products
@@ -75,6 +74,9 @@ struct ProductListView: View {
         }
     }
     
+    ///  The `Query` property wrapper needs to be attached to a `View` in order to work
+    ///  thus i couldn't implement  a proper LocalData layer, this a workaround for integrating
+    ///  SwiftData in CLEAN architecture
     func getProducts() async {
         if localProducts.isEmpty {
             await viewModel.getProducts()
