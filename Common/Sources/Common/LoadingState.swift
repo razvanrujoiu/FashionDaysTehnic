@@ -7,13 +7,13 @@
 
 import Foundation
 
-enum LoadingState: Equatable {
+public enum LoadingState: Equatable {
     case not_available
     case loading
     case success
     case failed(error: Error)
     
-    static func == (lhs: LoadingState, rhs: LoadingState) -> Bool {
+    public static func == (lhs: LoadingState, rhs: LoadingState) -> Bool {
         switch (lhs, rhs) {
         case (.loading, .loading):
             return true
