@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import FashionDays
+import Products
 
 final class ProductRemoteDataToDataMapperTests: XCTestCase {
     

@@ -7,6 +7,7 @@
 
 import Foundation
 import FashionDays
+import Products
 
 class ProductDataRepositoryMock: ProductRepositoryType {
     

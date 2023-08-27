@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import FashionDays
+import Products
 
 class ProductUseCaseMock: ProductUseCase {
      

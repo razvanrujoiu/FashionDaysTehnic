@@ -7,6 +7,7 @@
 
 import Foundation
 import FashionDays
+import Common
 
 func succcessHttpURLResponse(request: URLRequest) -> URLResponse {
     return HTTPURLResponse(url: request.url!,

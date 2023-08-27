@@ -5,8 +5,8 @@
 //  Created by Razvan Rujoiu on 26.08.2023.
 //
 
-import FashionDays
 import Foundation
+import Products
 
 public let productRemoteDataModelStub = ProductRemoteDataModel(id: 123,
                                                                name: "Tricou",

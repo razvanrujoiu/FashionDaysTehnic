@@ -20,6 +20,7 @@
 		E3C3F5DA2A9BBEFE00D4E0C1 /* Products in Frameworks */ = {isa = PBXBuildFile; productRef = E3C3F5D92A9BBEFE00D4E0C1 /* Products */; };
 		E3C3F5E22A9BC91C00D4E0C1 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = E3C3F5E12A9BC91C00D4E0C1 /* Common */; };
 		E3C3F5F12A9BCDD000D4E0C1 /* Products in Frameworks */ = {isa = PBXBuildFile; productRef = E3C3F5F02A9BCDD000D4E0C1 /* Products */; };
+		E3D6FB992A9BCF41008D8A87 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = E3D6FB982A9BCF41008D8A87 /* Common */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3C3F5F12A9BCDD000D4E0C1 /* Products in Frameworks */,
+				E3D6FB992A9BCF41008D8A87 /* Common in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,16 +115,8 @@
 		E3C3F5812A9A81DE00D4E0C1 /* FashionDaysTests */ = {
 			isa = PBXGroup;
 			children = (
-				E3C3F5892A9A81F100D4E0C1 /* ProductsTests */,
 			);
 			path = FashionDaysTests;
-			sourceTree = "<group>";
-		};
-		E3C3F5892A9A81F100D4E0C1 /* ProductsTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ProductsTests;
 			sourceTree = "<group>";
 		};
 		E3C3F5D82A9BBEFE00D4E0C1 /* Frameworks */ = {
@@ -178,6 +172,7 @@
 			name = FashionDaysTests;
 			packageProductDependencies = (
 				E3C3F5F02A9BCDD000D4E0C1 /* Products */,
+				E3D6FB982A9BCF41008D8A87 /* Common */,
 			);
 			productName = FashionDaysTests;
 			productReference = E3C3F5802A9A81DE00D4E0C1 /* FashionDaysTests.xctest */;
@@ -600,6 +595,10 @@
 		E3C3F5F02A9BCDD000D4E0C1 /* Products */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Products;
+		};
+		E3D6FB982A9BCF41008D8A87 /* Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Common;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

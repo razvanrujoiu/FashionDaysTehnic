@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import FashionDays
+import Products
 
 public let productDomainModelStub = ProductDomainModel(id: 123,
                                                    name: "Tricou",
