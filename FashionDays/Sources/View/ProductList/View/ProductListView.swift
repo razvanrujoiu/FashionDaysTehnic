@@ -7,12 +7,20 @@
 
 import SwiftUI
 import SwiftData
+import OSLog
 
 struct ProductListView: View {
+    
+    @Environment(\.modelContext) private var modelContext
+    @Query var localProducts: [ProductLocalDataModel]
     
     @Environment(ProductListCoordinator.self) private var coordinator
     @State private var viewModel = ProductListViewModel()
     @State private var searchText: String = ""
+    
+    @Inject private var localToPresentationMapper: ProductLocalToPresentationMapper
+    @Inject private var presentationToLocalMapper: ProductPresentationToLocalProductMapper
+    
     
     var searchResults: [ProductPresentationModel] {
         if searchText.isEmpty {
@@ -32,13 +40,7 @@ struct ProductListView: View {
             case .success:
                 List {
                     if searchResults.isEmpty {
-                        HStack {
-                            LottieView(lottieFile: "no_results_animation").frame(width: 44, height: 44)
-                            Text("No results found")
-                                .font(.system(size: 22))
-                                .fontWeight(.bold)
-                                .foregroundStyle(.black.opacity(0.7))
-                        }
+                        NoResultsView()
                     } else {
                         ForEach(searchResults, id: \.self) { product in
                             ProductItemCell(product: product) {
@@ -60,25 +62,33 @@ struct ProductListView: View {
                 .listStyle(.plain)
                 .scrollIndicators(.hidden)
             case .failed(let error):
-                VStack(spacing: 4) {
-                    Text("\(error.localizedDescription)")
-                    Button {
-                        Task {
-                            await viewModel.getProducts()
-                        }
-                    } label: {
-                        Text("Retry")
-                            .font(.system(size: 16))
-                            .fontWeight(.bold)
-                            .foregroundStyle(.blue.opacity(0.7))
+                ProductsErrorView(errorMessage: error.localizedDescription) {
+                    Task {
+                        await viewModel.getProducts()
                     }
                 }
             }
-            
         }
         .navigationTitle("Fashion Days")
         .task {
+            await getProducts()
+        }
+    }
+    
+    func getProducts() async {
+        if localProducts.isEmpty {
             await viewModel.getProducts()
+            for product in presentationToLocalMapper.map(viewModel.products) {
+                modelContext.insert(product)
+            }
+            do {
+                try modelContext.save()
+            } catch {
+                Logger.viewCycle.error("\(error.localizedDescription)")
+            }
+        } else {
+            viewModel.products = localToPresentationMapper.map(localProducts)
+            viewModel.loadingState = .success
         }
     }
 }

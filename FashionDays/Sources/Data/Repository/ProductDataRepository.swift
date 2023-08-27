@@ -15,7 +15,6 @@ class ProductDataRepository: ProductDataRepositoryType {
     
     @Inject private var mapper: ProductDataToDomainMapper
     @Inject private var dataSource: ProductDataSourceType
-    @Inject private var localDataSource: ProductLocalDataSourceType
     
     func requestDataProducts() async throws -> [ProductDataModel] {
         try await dataSource.getProducts()
@@ -25,7 +24,6 @@ class ProductDataRepository: ProductDataRepositoryType {
 extension ProductDataRepository: ProductRepositoryType {
     func requestProducts() async throws -> [ProductDomainModel] {
         let result = try await requestDataProducts()
-        localDataSource.insertProducts(products: result)
         return mapper.map(result)
     }
 }
