@@ -51,9 +51,6 @@
 		E3C3F56B2A9A389800D4E0C1 /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F56A2A9A389800D4E0C1 /* Action.swift */; };
 		E3C3F56E2A9A57E800D4E0C1 /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F56D2A9A57E800D4E0C1 /* CarouselView.swift */; };
 		E3C3F5752A9A636200D4E0C1 /* ProductLocalDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5742A9A636200D4E0C1 /* ProductLocalDataModel.swift */; };
-		E3C3F5772A9A658B00D4E0C1 /* ProductLocalToDataModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5762A9A658B00D4E0C1 /* ProductLocalToDataModelMapper.swift */; };
-		E3C3F5792A9A65DB00D4E0C1 /* ProductLocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5782A9A65DB00D4E0C1 /* ProductLocalDataSource.swift */; };
-		E3C3F57B2A9A766700D4E0C1 /* ProductDataToLocalModelMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F57A2A9A766700D4E0C1 /* ProductDataToLocalModelMapper.swift */; };
 		E3C3F5932A9A86F900D4E0C1 /* ProductDataToDomainMapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5922A9A86F900D4E0C1 /* ProductDataToDomainMapperTests.swift */; };
 		E3C3F5962A9A8AA900D4E0C1 /* ProductDataModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5952A9A8AA900D4E0C1 /* ProductDataModelStub.swift */; };
 		E3C3F5982A9A8B5200D4E0C1 /* ProductRemoteDataModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5972A9A8B5200D4E0C1 /* ProductRemoteDataModelStub.swift */; };
@@ -71,6 +68,11 @@
 		E3C3F5B92A9B6EA300D4E0C1 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = E3C3F5B82A9B6EA300D4E0C1 /* Lottie */; };
 		E3C3F5BC2A9B6EB900D4E0C1 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5BB2A9B6EB900D4E0C1 /* LottieView.swift */; };
 		E3C3F5BF2A9B707100D4E0C1 /* no_results_animation.json in Resources */ = {isa = PBXBuildFile; fileRef = E3C3F5BE2A9B707100D4E0C1 /* no_results_animation.json */; };
+		E3C3F5C82A9B903900D4E0C1 /* ProductLocalToPresentationMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5C72A9B903900D4E0C1 /* ProductLocalToPresentationMapper.swift */; };
+		E3C3F5CA2A9B957000D4E0C1 /* ProductPresentationToLocalProductMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5C92A9B957000D4E0C1 /* ProductPresentationToLocalProductMapper.swift */; };
+		E3C3F5CC2A9B97AD00D4E0C1 /* Logger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5CB2A9B97AD00D4E0C1 /* Logger+Extensions.swift */; };
+		E3C3F5CF2A9B9B1C00D4E0C1 /* NoResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5CE2A9B9B1C00D4E0C1 /* NoResultsView.swift */; };
+		E3C3F5D12A9B9B9000D4E0C1 /* ProductsErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C3F5D02A9B9B9000D4E0C1 /* ProductsErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -124,9 +126,6 @@
 		E3C3F56A2A9A389800D4E0C1 /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
 		E3C3F56D2A9A57E800D4E0C1 /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		E3C3F5742A9A636200D4E0C1 /* ProductLocalDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLocalDataModel.swift; sourceTree = "<group>"; };
-		E3C3F5762A9A658B00D4E0C1 /* ProductLocalToDataModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLocalToDataModelMapper.swift; sourceTree = "<group>"; };
-		E3C3F5782A9A65DB00D4E0C1 /* ProductLocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLocalDataSource.swift; sourceTree = "<group>"; };
-		E3C3F57A2A9A766700D4E0C1 /* ProductDataToLocalModelMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataToLocalModelMapper.swift; sourceTree = "<group>"; };
 		E3C3F5802A9A81DE00D4E0C1 /* FashionDaysTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FashionDaysTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3C3F5922A9A86F900D4E0C1 /* ProductDataToDomainMapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataToDomainMapperTests.swift; sourceTree = "<group>"; };
 		E3C3F5952A9A8AA900D4E0C1 /* ProductDataModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDataModelStub.swift; sourceTree = "<group>"; };
@@ -144,6 +143,11 @@
 		E3C3F5B42A9B550500D4E0C1 /* ProductRemoteDataSourceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemoteDataSourceMock.swift; sourceTree = "<group>"; };
 		E3C3F5BB2A9B6EB900D4E0C1 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		E3C3F5BE2A9B707100D4E0C1 /* no_results_animation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = no_results_animation.json; sourceTree = "<group>"; };
+		E3C3F5C72A9B903900D4E0C1 /* ProductLocalToPresentationMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLocalToPresentationMapper.swift; sourceTree = "<group>"; };
+		E3C3F5C92A9B957000D4E0C1 /* ProductPresentationToLocalProductMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductPresentationToLocalProductMapper.swift; sourceTree = "<group>"; };
+		E3C3F5CB2A9B97AD00D4E0C1 /* Logger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Extensions.swift"; sourceTree = "<group>"; };
+		E3C3F5CE2A9B9B1C00D4E0C1 /* NoResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoResultsView.swift; sourceTree = "<group>"; };
+		E3C3F5D02A9B9B9000D4E0C1 /* ProductsErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +290,7 @@
 				E3C3F4E22A991B7A00D4E0C1 /* DI */,
 				E3C3F4E82A9922C900D4E0C1 /* Mapper.swift */,
 				E3C3F56A2A9A389800D4E0C1 /* Action.swift */,
+				E3C3F5CB2A9B97AD00D4E0C1 /* Logger+Extensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -461,6 +466,7 @@
 		E3C3F5562A9A16E900D4E0C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E3C3F5CD2A9B9B0800D4E0C1 /* Components */,
 				E3C3F5202A9940CA00D4E0C1 /* ProductListView.swift */,
 				E3C3F5572A9A16FA00D4E0C1 /* ProductItemCell.swift */,
 			);
@@ -503,8 +509,6 @@
 		E3C3F56F2A9A631E00D4E0C1 /* DataSourceLocal */ = {
 			isa = PBXGroup;
 			children = (
-				E3C3F5732A9A634E00D4E0C1 /* DataSource */,
-				E3C3F5722A9A633400D4E0C1 /* Service */,
 				E3C3F5712A9A632E00D4E0C1 /* Mapper */,
 				E3C3F5702A9A632800D4E0C1 /* Model */,
 			);
@@ -522,25 +526,10 @@
 		E3C3F5712A9A632E00D4E0C1 /* Mapper */ = {
 			isa = PBXGroup;
 			children = (
-				E3C3F5762A9A658B00D4E0C1 /* ProductLocalToDataModelMapper.swift */,
-				E3C3F57A2A9A766700D4E0C1 /* ProductDataToLocalModelMapper.swift */,
+				E3C3F5C72A9B903900D4E0C1 /* ProductLocalToPresentationMapper.swift */,
+				E3C3F5C92A9B957000D4E0C1 /* ProductPresentationToLocalProductMapper.swift */,
 			);
 			path = Mapper;
-			sourceTree = "<group>";
-		};
-		E3C3F5722A9A633400D4E0C1 /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
-		E3C3F5732A9A634E00D4E0C1 /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				E3C3F5782A9A65DB00D4E0C1 /* ProductLocalDataSource.swift */,
-			);
-			path = DataSource;
 			sourceTree = "<group>";
 		};
 		E3C3F5812A9A81DE00D4E0C1 /* FashionDaysTests */ = {
@@ -668,6 +657,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		E3C3F5CD2A9B9B0800D4E0C1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				E3C3F5CE2A9B9B1C00D4E0C1 /* NoResultsView.swift */,
+				E3C3F5D02A9B9B9000D4E0C1 /* ProductsErrorView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -792,10 +790,11 @@
 				E3C3F4DA2A99154D00D4E0C1 /* CoreNetworkingController.swift in Sources */,
 				E3C3F5582A9A16FA00D4E0C1 /* ProductItemCell.swift in Sources */,
 				E3C3F5662A9A25A200D4E0C1 /* ProductDetailViewModel.swift in Sources */,
-				E3C3F5792A9A65DB00D4E0C1 /* ProductLocalDataSource.swift in Sources */,
 				E3C3F4D62A99132B00D4E0C1 /* NetworkRequestable.swift in Sources */,
+				E3C3F5CA2A9B957000D4E0C1 /* ProductPresentationToLocalProductMapper.swift in Sources */,
 				E3C3F4FB2A992A9C00D4E0C1 /* UseCase.swift in Sources */,
 				E3C3F4FE2A992AD600D4E0C1 /* ProductUseCase.swift in Sources */,
+				E3C3F5CF2A9B9B1C00D4E0C1 /* NoResultsView.swift in Sources */,
 				E3C3F4BC2A990DCF00D4E0C1 /* ProductDataModel.swift in Sources */,
 				E3C3F4F82A992A6700D4E0C1 /* ProductRepositoryType.swift in Sources */,
 				E3C3F4EC2A99231A00D4E0C1 /* ProductRemoteDataToDataModelMapper.swift in Sources */,
@@ -808,22 +807,23 @@
 				E3C3F50A2A992CE100D4E0C1 /* ProductDomainFacade.swift in Sources */,
 				E3C3F56E2A9A57E800D4E0C1 /* CarouselView.swift in Sources */,
 				E3C3F4AE2A990D0D00D4E0C1 /* ContentView.swift in Sources */,
+				E3C3F5C82A9B903900D4E0C1 /* ProductLocalToPresentationMapper.swift in Sources */,
 				E3C3F5072A992C3700D4E0C1 /* ProductDomainToPresentationMapper.swift in Sources */,
 				E3C3F4DC2A9917D300D4E0C1 /* ApiEndpoint.swift in Sources */,
 				E3C3F4DE2A9917FE00D4E0C1 /* HTTPMethod.swift in Sources */,
-				E3C3F5772A9A658B00D4E0C1 /* ProductLocalToDataModelMapper.swift in Sources */,
 				E3C3F5BC2A9B6EB900D4E0C1 /* LottieView.swift in Sources */,
 				E3C3F5122A992F9400D4E0C1 /* ProductDataToDomainMapper.swift in Sources */,
 				E3C3F5042A992C0600D4E0C1 /* ProductPresentationModel.swift in Sources */,
-				E3C3F57B2A9A766700D4E0C1 /* ProductDataToLocalModelMapper.swift in Sources */,
 				E3C3F5692A9A262600D4E0C1 /* ProductDetailCoordinator.swift in Sources */,
 				E3C3F4AC2A990D0D00D4E0C1 /* FashionDaysApp.swift in Sources */,
 				E3C3F5752A9A636200D4E0C1 /* ProductLocalDataModel.swift in Sources */,
+				E3C3F5D12A9B9B9000D4E0C1 /* ProductsErrorView.swift in Sources */,
 				E3C3F5612A9A247100D4E0C1 /* ProductListCoordinator.swift in Sources */,
 				E3C3F54F2A99625A00D4E0C1 /* Resolver.swift in Sources */,
 				E3C3F5512A9962BB00D4E0C1 /* DependencyInjectionContainer.swift in Sources */,
 				E3C3F4D12A99111400D4E0C1 /* ProductService.swift in Sources */,
 				E3C3F4E92A9922C900D4E0C1 /* Mapper.swift in Sources */,
+				E3C3F5CC2A9B97AD00D4E0C1 /* Logger+Extensions.swift in Sources */,
 				E3C3F4E12A991AC600D4E0C1 /* ProductRemoteDataSource.swift in Sources */,
 				E3C3F5232A9940F000D4E0C1 /* ProductListViewModel.swift in Sources */,
 			);
