@@ -7,14 +7,16 @@
 
 import Foundation
 
-public class ProductUseCase: UseCase {
+open class ProductUseCase: UseCase {
     
     public typealias In = Void
     public typealias Out = [ProductDomainModel]
     
+    public init() { }
+    
     @Inject private var dataRepository: ProductRepositoryType
     
-    public func execute(_ parameters: In) async throws -> Out {
+    open func execute(_ parameters: In) async throws -> Out {
         try await dataRepository.requestProducts()
     }
 }
