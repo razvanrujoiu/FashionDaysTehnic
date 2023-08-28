@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Kingfisher
+import Common
 
 struct ProductDetailView: View {
     
