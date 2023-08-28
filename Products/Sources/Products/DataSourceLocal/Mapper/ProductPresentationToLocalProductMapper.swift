@@ -8,12 +8,10 @@
 import Common
 import Foundation
 
-class ProductPresentationToLocalProductMapper: Mapper {
+final class ProductPresentationToLocalProductMapper: Mapper {
     
     typealias In = [ProductPresentationModel]
     typealias Out = [ProductLocalDataModel]
-    
-    init() { }
     
     func map(_ value: In) -> Out {
         var output: [ProductLocalDataModel] = []
