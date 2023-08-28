@@ -19,7 +19,7 @@ public class ProductLocalDataModel: Identifiable {
     public var imagesListing: [String]
     public var imagesDetail: [String]
     
-    init(id: Double, name: String, brand: String, price: Double, originalPrice: Double, stockState: String, imagesListing: [String], imagesDetail: [String]) {
+    public init(id: Double, name: String, brand: String, price: Double, originalPrice: Double, stockState: String, imagesListing: [String], imagesDetail: [String]) {
         self.id = id
         self.name = name
         self.brand = brand

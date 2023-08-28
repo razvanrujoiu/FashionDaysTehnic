@@ -9,14 +9,14 @@ import Common
 import Foundation
 import SwiftUI
 
-protocol ProductListViewModelType: Identifiable {
+public protocol ProductListViewModelType: Identifiable {
     func getProducts() async throws
 }
 
 @Observable
 class ProductListViewModel: ProductListViewModelType {
     
-    let id = UUID()
+    @ObservationIgnored let id = UUID()
     var loadingState: LoadingState = .not_available
     var products: [ProductPresentationModel] = []
     

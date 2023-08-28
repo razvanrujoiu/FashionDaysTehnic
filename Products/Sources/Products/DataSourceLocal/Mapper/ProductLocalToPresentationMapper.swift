@@ -8,7 +8,7 @@
 import Common
 import Foundation
 
-class ProductLocalToPresentationMapper: Mapper {
+public class ProductLocalToPresentationMapper: Mapper {
     
     public typealias In = [ProductLocalDataModel]
     public typealias Out = [ProductPresentationModel]
