@@ -58,7 +58,7 @@ struct ProductListView: View {
                         await viewModel.getProducts()
                     }
                 }
-                .searchable(text: $searchText)
+                .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
                 .listStyle(.plain)
                 .scrollIndicators(.hidden)
             case .failed(let error):
