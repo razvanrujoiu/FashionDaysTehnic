@@ -6,17 +6,17 @@
 //
 
 import Foundation
-import Products
+@testable import Products
 import Common
 
-public class ProductServiceMock: NetworkService {
+class ProductServiceMock: NetworkService {
 
-    public var networkController: CoreNetworkingAPIProtocol = CoreNetworkingControllerMock()
+    var networkController: CoreNetworkingAPIProtocol = CoreNetworkingControllerMock()
     
-    public typealias RequestBody = Void
+    typealias RequestBody = Void
     
-    public typealias ResponseModel = ProductsRemoteDataModel
+    typealias ResponseModel = ProductsRemoteDataModel
     
-    public var endPoint: ApiEndpoint = ApiEndpoint(url: URL(string: "https://m.fashiondays.com/mobile/9/g/women/clothing/")!,
+    var endPoint: ApiEndpoint = ApiEndpoint(url: URL(string: "https://m.fashiondays.com/mobile/9/g/women/clothing/")!,
                                                                headers: ["x-mobile-app-locale": "ro_RO"], method: .get)
 }

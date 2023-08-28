@@ -7,20 +7,20 @@
 
 import Foundation
 
-public struct ProductsRemoteDataModel: Decodable {
-    public let products: [ProductRemoteDataModel]
+struct ProductsRemoteDataModel: Decodable {
+    let products: [ProductRemoteDataModel]
 }
 
-public struct ProductRemoteDataModel: Decodable {
-    public let id: Double
-    public let name: String
-    public let brand: String
-    public let price: Double
-    public let originalPrice: Double
-    public let stockState: String
-    public let images: ImagesDetail
+struct ProductRemoteDataModel: Decodable {
+    let id: Double
+    let name: String
+    let brand: String
+    let price: Double
+    let originalPrice: Double
+    let stockState: String
+    let images: ImagesDetail
     
-    public init(id: Double,
+    init(id: Double,
          name: String,
          brand: String,
          price: Double,
@@ -46,11 +46,11 @@ public struct ProductRemoteDataModel: Decodable {
         case images = "product_images"
     }
     
-    public struct ImagesDetail: Decodable {
-        public let listing: [String]
-        public let detail: [String]
+    struct ImagesDetail: Decodable {
+        let listing: [String]
+        let detail: [String]
         
-        public init(listing: [String], detail: [String]) {
+        init(listing: [String], detail: [String]) {
             self.listing = listing
             self.detail = detail
         }

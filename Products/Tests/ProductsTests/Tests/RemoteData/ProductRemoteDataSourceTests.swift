@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import Products
 
 final class ProductRemoteDataSourceTests: XCTestCase {
     

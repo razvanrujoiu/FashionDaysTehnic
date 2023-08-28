@@ -7,7 +7,7 @@
 
 import Foundation
 
-public class Resolver {
+class Resolver {
     static let shared = Resolver()
     
     //get the IOC container

@@ -6,9 +6,9 @@
 //
 
 import Foundation
-import Products
+@testable import Products
 
-public let productDomainModelStub = ProductDomainModel(id: 123,
+let productDomainModelStub = ProductDomainModel(id: 123,
                                                    name: "Tricou",
                                                    brand: "Nike",
                                                    price: 100,

@@ -7,17 +7,17 @@
 
 import Foundation
 
-public struct ProductDomainModel {
-    public let id: Double
-    public let name: String
-    public let brand: String
-    public let price: Double
-    public let originalPrice: Double
-    public let stockState: String
-    public let imagesListing: [String]
-    public let imagesDetail: [String]
+struct ProductDomainModel {
+    let id: Double
+    let name: String
+    let brand: String
+    let price: Double
+    let originalPrice: Double
+    let stockState: String
+    let imagesListing: [String]
+    let imagesDetail: [String]
     
-    public init(id: Double,
+    init(id: Double,
          name: String,
          brand: String,
          price: Double,

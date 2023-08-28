@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import Products
+@testable import Products
 import UIKit
 import SwiftData
 import SwiftUI

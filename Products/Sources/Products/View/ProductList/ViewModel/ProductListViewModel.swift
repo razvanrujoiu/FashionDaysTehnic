@@ -9,7 +9,7 @@ import Common
 import Foundation
 import SwiftUI
 
-public protocol ProductListViewModelType: Identifiable {
+protocol ProductListViewModelType: Identifiable {
     func getProducts() async throws
 }
 

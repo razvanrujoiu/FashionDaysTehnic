@@ -8,7 +8,7 @@
 import Common
 import Foundation
 
-public protocol ProductRemoteDataSourceType {
+protocol ProductRemoteDataSourceType {
     func getRemoteProducts() async throws -> ProductsRemoteDataModel
 }
 
@@ -16,9 +16,7 @@ class ProductRemoteDataSource: ProductRemoteDataSourceType {
     
     @Inject private var mapper: ProductRemoteDataToDataModelMapper
     @Inject private var coreNetworkingAPI: CoreNetworkingAPIProtocol
-    
-    public init() {}
-    
+        
     private var url: URL {
         guard let url = URL(string: "https://m.fashiondays.com/mobile/9/g/women/clothing/") else {
             preconditionFailure("URL not valid")

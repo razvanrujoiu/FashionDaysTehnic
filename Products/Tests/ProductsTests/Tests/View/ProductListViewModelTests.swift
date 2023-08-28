@@ -5,7 +5,7 @@
 //  Created by Razvan Rujoiu on 28.08.2023.
 //
 
-import Products
+@testable import Products
 import XCTest
 
 final class ProductListViewModelTests: XCTestCase {

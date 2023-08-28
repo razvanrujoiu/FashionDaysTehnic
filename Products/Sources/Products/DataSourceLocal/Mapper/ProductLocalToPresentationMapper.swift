@@ -8,14 +8,12 @@
 import Common
 import Foundation
 
-public class ProductLocalToPresentationMapper: Mapper {
+class ProductLocalToPresentationMapper: Mapper {
     
-    public typealias In = [ProductLocalDataModel]
-    public typealias Out = [ProductPresentationModel]
+    typealias In = [ProductLocalDataModel]
+    typealias Out = [ProductPresentationModel]
     
-    public init() { }
-    
-    public func map(_ value: In) -> Out {
+    func map(_ value: In) -> Out {
         var output: [ProductPresentationModel] = []
         for product in value {
             output.append(mapElement(product))
@@ -23,7 +21,7 @@ public class ProductLocalToPresentationMapper: Mapper {
         return output
     }
     
-    public func mapElement(_ value: ProductLocalDataModel) -> ProductPresentationModel {
+    func mapElement(_ value: ProductLocalDataModel) -> ProductPresentationModel {
         return .init(id: value.id,
                      name: value.name,
                      brand: value.brand,

@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol ProductDataSourceType {
+protocol ProductDataSourceType {
     func getProducts() async throws -> [ProductDataModel]
 }

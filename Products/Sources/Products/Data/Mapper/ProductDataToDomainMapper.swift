@@ -8,14 +8,12 @@
 import Common
 import Foundation
 
-final public class ProductDataToDomainMapper: Mapper {
+final class ProductDataToDomainMapper: Mapper {
     
-    public typealias In = [ProductDataModel]
-    public typealias Out = [ProductDomainModel]
-    
-    public init() {}
-    
-    public func map(_ value: In) -> Out {
+    typealias In = [ProductDataModel]
+    typealias Out = [ProductDomainModel]
+        
+    func map(_ value: In) -> Out {
         var output: [ProductDomainModel] = []
         for product in value {
             output.append(mapElement(product))
@@ -23,7 +21,7 @@ final public class ProductDataToDomainMapper: Mapper {
         return output
     }
     
-    public func mapElement(_ value: ProductDataModel) -> ProductDomainModel {
+    func mapElement(_ value: ProductDataModel) -> ProductDomainModel {
         return .init(id: value.id,
                      name: value.name,
                      brand: value.brand,

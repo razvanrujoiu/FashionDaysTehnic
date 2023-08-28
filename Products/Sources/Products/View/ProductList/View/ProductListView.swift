@@ -10,7 +10,7 @@ import SwiftUI
 import SwiftData
 import OSLog
 
-public struct ProductListView: View {
+struct ProductListView: View {
     
     @Environment(\.modelContext) private var modelContext
     @Query var localProducts: [ProductLocalDataModel]
@@ -30,9 +30,7 @@ public struct ProductListView: View {
         }
     }
     
-    public init() { }
-    
-    public var body: some View {
+    var body: some View {
         VStack {
             switch viewModel.loadingState {
             case .not_available:

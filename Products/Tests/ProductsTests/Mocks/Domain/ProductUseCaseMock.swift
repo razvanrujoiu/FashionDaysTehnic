@@ -6,12 +6,10 @@
 //
 
 import Foundation
-import Products
+@testable import Products
 
 class ProductUseCaseMock: ProductUseCase {
-     
-    override init() { }
-    
+         
     override func execute(_ parameters: ProductUseCase.In) async throws -> ProductUseCase.Out {
         return Array(arrayLiteral: productDomainModelStub)
     }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-public protocol ProductDomainFacadeType {
+protocol ProductDomainFacadeType {
     func getProducts() async throws -> [ProductPresentationModel]
 }
 
@@ -15,8 +15,6 @@ class ProductDomainFacade: ProductDomainFacadeType {
         
     @Inject private var productUseCase: ProductUseCase
     @Inject private var mapper: ProductDomainToPresentationMapper
-    
-    public init() {}
     
     func getProducts() async throws -> [ProductPresentationModel] {
         let domainResult = try await productUseCase.execute(())

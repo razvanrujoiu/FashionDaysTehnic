@@ -26,7 +26,7 @@ func notFoundHttpURLResponse(request: URLRequest) -> URLResponse {
                            httpVersion: "HTTP/1.1", headerFields: nil)!
 }
 
-public class URLSessionMock {
+class URLSessionMock {
     
     /// Properties that enable us to set exactly what data and response
     /// we want our mocked URLSession to return for any request.
@@ -48,9 +48,9 @@ public class URLSessionMock {
     }
 }
 
-public class CoreNetworkingControllerMock: CoreNetworkingAPIProtocol {
+class CoreNetworkingControllerMock: CoreNetworkingAPIProtocol {
     
-    public func request<ResponseModel>(urlRequest: URLRequest) async throws -> ResponseModel where ResponseModel : Decodable {
+    func request<ResponseModel>(urlRequest: URLRequest) async throws -> ResponseModel where ResponseModel : Decodable {
         let data = try await URLSessionMock(response: succcessHttpURLResponse(request: urlRequest)).data(for: urlRequest)
         return try JSONDecoder().decode(ResponseModel.self, from: data.0)
     }

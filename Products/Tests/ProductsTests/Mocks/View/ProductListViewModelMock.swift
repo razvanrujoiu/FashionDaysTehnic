@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Products
+@testable import Products
 
 class ProductListViewModelMock: ProductListViewModelType {
     

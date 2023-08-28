@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import Products
+@testable import Products
 
 final class ProductDataRepositoryTests: XCTestCase {
     private var mapper: ProductDataToDomainMapper!

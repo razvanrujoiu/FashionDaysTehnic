@@ -7,6 +7,6 @@
 
 import Foundation
 
-public protocol ProductRepositoryType {
+protocol ProductRepositoryType {
     func requestProducts() async throws -> [ProductDomainModel]
 }

@@ -6,7 +6,7 @@
 //
 
 import XCTest
-import Products
+@testable import Products
 
 final class ProductDomainToPresentationMapperTests: XCTestCase {
     private var mapper: ProductDomainToPresentationMapper!
