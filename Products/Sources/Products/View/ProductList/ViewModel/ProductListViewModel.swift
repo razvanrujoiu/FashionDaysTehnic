@@ -20,11 +20,9 @@ class ProductListViewModel: ProductListViewModelType {
     var loadingState: LoadingState = .not_available
     var products: [ProductPresentationModel] = []
     
-    init() {
-        self.productDomainFacade = ProductDomainFacade()
-    }
-    
-    private var productDomainFacade: ProductDomainFacadeType
+    @ObservationIgnored
+    @Inject
+    var productDomainFacade: ProductDomainFacadeType
     
     func getProducts() async {
         self.loadingState = .loading
