@@ -12,14 +12,10 @@ import SwiftUI
 
 class ProductLocalService {
     
-    var container: ModelContainer!
+    var container: ModelContainer?
 
-    init?() {
-        do {
-            self.container = try ModelContainer(for: ProductLocalDataModel.self)
-        } catch {
-            Logger.viewCycle.error("\(error.localizedDescription)")
-        }
+    init() {
+        self.container = try? ModelContainer(for: ProductLocalDataModel.self)
     }
     
     /// We need to adnotate this function with `MainActor` to be sure it is running on
@@ -27,6 +23,7 @@ class ProductLocalService {
     @MainActor
     func getLocalProducts() throws -> [ProductLocalDataModel] {
         let descriptor = FetchDescriptor<ProductLocalDataModel>()
+        guard let container = container else { return [] }
         let localProducts = try container.mainContext.fetch(descriptor)
         return localProducts
     }
@@ -40,6 +37,7 @@ class ProductLocalService {
     
     @MainActor
     private func insertProduct(product: ProductLocalDataModel) {
+        guard let container = container else { return }
         container.mainContext.insert(product)
         do {
             try container.mainContext.save()

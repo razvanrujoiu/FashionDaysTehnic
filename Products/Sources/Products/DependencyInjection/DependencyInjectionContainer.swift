@@ -56,6 +56,9 @@ public func buildContainer() -> Container {
     container.register(ProductRemoteDataSource.self) { _ in
         ProductRemoteDataSource()
     }.inObjectScope(.container)
+    container.register(ProductLocalService.self) { _ in
+        ProductLocalService()
+    }.inObjectScope(.container)
 
     return container
 }

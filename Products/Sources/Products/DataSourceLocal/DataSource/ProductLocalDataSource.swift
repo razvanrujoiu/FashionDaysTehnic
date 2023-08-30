@@ -19,19 +19,13 @@ class ProductLocalDataSource: ProductLocalDataSourceType {
     
     @Inject var localToDataMapper: ProductLocalToDataModelMapper
     @Inject var dataToLocalMapper: ProductDataToLocalModelMapper
-    var productLocalService: ProductLocalService?
-    
-    init() {
-        productLocalService = ProductLocalService()
-    }
+    @Inject var productLocalService: ProductLocalService
     
     func getLocalProducts() async throws -> [ProductLocalDataModel] {
-        guard let productLocalService = productLocalService else { return [] }
-        return try await productLocalService.getLocalProducts()
+        try await productLocalService.getLocalProducts()
     }
      
     func insertProducts(products: [ProductDataModel]) async {
-        guard let productLocalService = productLocalService else { return }
         await productLocalService.insertProducts(products: dataToLocalMapper.map(products))
     }
 }
