@@ -7,20 +7,13 @@
 
 import Common
 import SwiftUI
-import SwiftData
 import OSLog
 
 struct ProductListView: View {
-    
-    @Environment(\.modelContext) private var modelContext
-    @Query var localProducts: [ProductLocalDataModel]
-    
+        
     @Environment(ProductListCoordinator.self) private var coordinator
     @State private var viewModel = ProductListViewModel()
     @State private var searchText: String = ""
-    
-    @Inject private var localToPresentationMapper: ProductLocalToPresentationMapper
-    @Inject private var presentationToLocalMapper: ProductPresentationToLocalProductMapper
     
     var searchResults: [ProductPresentationModel] {
         if searchText.isEmpty {
@@ -71,27 +64,7 @@ struct ProductListView: View {
         }
         .navigationTitle("Fashion Days")
         .task {
-            await getProducts()
-        }
-    }
-    
-    ///  The `Query` property wrapper needs to be attached to a `View` in order to work
-    ///  thus i couldn't implement  a proper LocalData layer, this a workaround for integrating
-    ///  SwiftData in CLEAN architecture
-    func getProducts() async {
-        if localProducts.isEmpty {
             await viewModel.getProducts()
-            for product in presentationToLocalMapper.map(viewModel.products) {
-                modelContext.insert(product)
-            }
-            do {
-                try modelContext.save()
-            } catch {
-                Logger.viewCycle.error("\(error.localizedDescription)")
-            }
-        } else {
-            viewModel.products = localToPresentationMapper.map(localProducts)
-            viewModel.loadingState = .success
         }
     }
 }

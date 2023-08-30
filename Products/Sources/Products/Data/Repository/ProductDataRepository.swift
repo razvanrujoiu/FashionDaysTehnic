@@ -14,10 +14,17 @@ protocol ProductDataRepositoryType {
 class ProductDataRepository: ProductDataRepositoryType {
     
     @Inject private var mapper: ProductDataToDomainMapper
-    @Inject private var dataSource: ProductDataSourceType
+    @Inject private var localDataSource: ProductLocalDataSource
+    @Inject private var remoteDataSource: ProductRemoteDataSource
     
     func requestDataProducts() async throws -> [ProductDataModel] {
-        try await dataSource.getProducts()
+        var products: [ProductDataModel] = []
+        products = try await localDataSource.getProducts()
+        if products.isEmpty {
+            products =  try await remoteDataSource.getProducts()
+            await localDataSource.insertProducts(products: products)
+        }
+        return products
     }
 }
 

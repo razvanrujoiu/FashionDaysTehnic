@@ -22,15 +22,15 @@ public func buildContainer() -> Container {
     container.register(ProductDomainToPresentationMapper.self) { _ in
         ProductDomainToPresentationMapper()
     }.inObjectScope(.container)
-    container.register(ProductPresentationToLocalProductMapper.self) { _ in
-        ProductPresentationToLocalProductMapper()
+    container.register(ProductLocalToDataModelMapper.self) { _ in
+        ProductLocalToDataModelMapper()
     }.inObjectScope(.container)
-    container.register(ProductLocalToPresentationMapper.self) { _ in
-        ProductLocalToPresentationMapper()
-    }.inObjectScope(.container)
+    container.register(ProductDataToLocalModelMapper.self) { _ in
+        ProductDataToLocalModelMapper()
+    }
     
     // MARK: - DataSources
-    container.register(ProductDataSourceType.self) { _ in
+    container.register(ProductRemoteDataSourceType.self) { _ in
         ProductRemoteDataSource()
     }.inObjectScope(.container)
         
@@ -44,11 +44,18 @@ public func buildContainer() -> Container {
     
     container.register(ProductDomainFacadeType.self) { _ in
         ProductDomainFacade()
-    }
+    }.inObjectScope(.container)
     
     container.register(CoreNetworkingAPIProtocol.self) { _ in
         CoreNetworkingController()
-    }
+    }.inObjectScope(.container)
+    
+    container.register(ProductLocalDataSource.self) { _ in
+        ProductLocalDataSource()
+    }.inObjectScope(.container)
+    container.register(ProductRemoteDataSource.self) { _ in
+        ProductRemoteDataSource()
+    }.inObjectScope(.container)
 
     return container
 }
