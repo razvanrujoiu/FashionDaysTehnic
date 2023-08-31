@@ -12,6 +12,5 @@ struct ContentView: View {
     
     var body: some View {
         ProductListCoordinatorView()
-            .background(Color.gray.opacity(0.2))
     }
 }

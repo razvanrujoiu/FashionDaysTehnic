@@ -34,17 +34,8 @@ struct ProductDetailView: View {
                         .font(.system(size: 16))
                         .fontWeight(.regular)
                         .opacity(0.7)
-                    HStack(spacing: 8) {
-                        if product.originalPrice != product.price {
-                            Text("\(String(product.originalPrice)) Lei")
-                                .font(.system(size: 16))
-                                .fontWeight(.bold)
-                                .strikethrough()
-                        }
-                        Text("\(String(product.price)) Lei")
-                            .font(.system(size: 16))
-                            .fontWeight(.bold)
-                    }
+                    ProductPriceView(price: product.price,
+                                     originalPrice: product.originalPrice)
                     if product.stockState {
                         Text("In stoc")
                             .font(.system(size: 16))
