@@ -22,24 +22,27 @@ struct ProductsGridItemCell: View {
                     .resizable()
                     .cacheMemoryOnly()
                     .aspectRatio(contentMode: .fill)
-                    .frame(width: 80, height: 100)
+                    .frame(width: 150, height: 180)
                     .clipShape(.rect(cornerRadius: 12))
                     .padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 0))
                 Spacer()
-                HStack {
-                    Spacer()
-                    Text(product.name)
-                        .font(.system(size: 14))
-                        .fontWeight(.medium)
-                    Spacer()
+                VStack(spacing: 4) {
+                    HStack {
+                        Spacer()
+                        Text(product.name)
+                            .font(.system(size: 14))
+                            .fontWeight(.medium)
+                        Spacer()
+                    }
+                    
+                    Text(product.brand)
+                        .font(.system(size: 12))
+                        .fontWeight(.regular)
+                        .opacity(0.8)
+                    
+                    ProductPriceView(price: product.price,
+                                     originalPrice: product.originalPrice)
                 }
-                Text(product.brand)
-                    .font(.system(size: 10))
-                    .fontWeight(.regular)
-                    .opacity(0.8)
-                Text("\(String(product.price)) Lei")
-                    .font(.system(size: 16))
-                    .fontWeight(.bold)
                 Spacer()
             }.background(.white)
             .clipShape(.rect(cornerSize: CGSize(width: 12, height: 12)))

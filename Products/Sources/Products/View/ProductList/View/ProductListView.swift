@@ -36,9 +36,9 @@ struct ProductListView: View {
                 ProgressView()
             case .success:
                 if isShowingGrid {
-                    ProductsGrid()
+                    ProductsGrid().transition(.opacity)
                 } else {
-                    ProductsList()
+                    ProductsList().transition(.opacity)
                 }
             case .failed(let error):
                 ProductsErrorView(errorMessage: error.localizedDescription) {
@@ -52,7 +52,9 @@ struct ProductListView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button(action: {
-                    isShowingGrid.toggle()
+                    withAnimation {
+                        isShowingGrid.toggle()
+                    }
                 }, label: {
                     isShowingGrid ? Image(systemName: "list.bullet") : Image(systemName: "square.grid.2x2")
                 })
@@ -73,10 +75,9 @@ extension ProductListView {
                 NoResultsView()
             } else {
                 ForEach(searchResults, id: \.self) { product in
-                    ProductItemCell(product: product) {
+                    ProductListItemCell(product: product) {
                         coordinator.push(page: .productDetail(product: product))
                     }.listRowSeparator(.hidden)
-                        .listRowBackground(Color.gray.opacity(0.2))
                 }
                 .onMove(perform: { indices, newOffset in
                     viewModel.products.move(fromOffsets: indices, toOffset: newOffset)
@@ -104,6 +105,12 @@ extension ProductListView {
                 }
             }
             .padding(.horizontal)
-        }.background(Color.gray.opacity(0.2))
+        }
+        .refreshable {
+            Task {
+                await viewModel.getProducts()
+            }
+        }.searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
+       
     }
 }
