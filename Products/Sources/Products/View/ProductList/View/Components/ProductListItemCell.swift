@@ -23,7 +23,7 @@ struct ProductListItemCell: View {
                         .cacheMemoryOnly()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 120, height: 150)
-                        .clipShape(.rect(cornerRadius: 12))
+                        .clipShape(.rect(bottomTrailingRadius: 36, topTrailingRadius: 36))
                         .padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 0))
                     VStack(alignment: .leading, spacing: 8) {
                         Spacer()

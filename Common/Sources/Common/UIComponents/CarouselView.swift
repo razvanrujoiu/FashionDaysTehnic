@@ -28,7 +28,7 @@ public struct CarouselView: View {
                         .cacheMemoryOnly()
                         .aspectRatio(contentMode: .fill)
                         .frame(width: 275, height: 350)
-                        .clipShape(.rect(cornerRadius: 12))
+                        .clipShape(.rect(bottomTrailingRadius: 66, topTrailingRadius: 66))
                         .opacity(currentIndex == index ? 1.0 : 0.5)
                         .scaleEffect(currentIndex == index ? 1.0 : 0.9)
                         .offset(x: CGFloat(index - currentIndex) * 285 + dragOffset, y: 0)

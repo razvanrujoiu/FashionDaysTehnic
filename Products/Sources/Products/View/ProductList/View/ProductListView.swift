@@ -25,7 +25,7 @@ struct ProductListView: View {
         }
     }
     
-    let columns = [GridItem(.adaptive(minimum: 150), spacing: 20)]
+    let columns = [GridItem(.adaptive(minimum: 150), spacing: 12)]
     
     var body: some View {
         VStack {
@@ -72,7 +72,7 @@ extension ProductListView {
     func ProductsList() -> some View {
         List {
             if searchResults.isEmpty {
-                NoResultsView()
+                NoResultsView().listRowSeparator(.hidden)
             } else {
                 ForEach(searchResults, id: \.self) { product in
                     ProductListItemCell(product: product) {
@@ -97,14 +97,18 @@ extension ProductListView {
     @ViewBuilder
     func ProductsGrid() -> some View {
         ScrollView {
-            LazyVGrid(columns: columns, spacing: 24) {
-                ForEach(searchResults, id: \.self) { product in
-                    ProductsGridItemCell(product: product) {
-                        coordinator.push(page: .productDetail(product: product))
+            if searchResults.isEmpty {
+                NoResultsView().listRowSeparator(.hidden)
+            } else {
+                LazyVGrid(columns: columns, spacing: 12) {
+                    ForEach(searchResults, id: \.self) { product in
+                        ProductsGridItemCell(product: product) {
+                            coordinator.push(page: .productDetail(product: product))
+                        }
                     }
                 }
+                .padding(.horizontal)
             }
-            .padding(.horizontal)
         }
         .refreshable {
             Task {

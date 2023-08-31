@@ -23,7 +23,7 @@ struct ProductsGridItemCell: View {
                     .cacheMemoryOnly()
                     .aspectRatio(contentMode: .fill)
                     .frame(width: 150, height: 180)
-                    .clipShape(.rect(cornerRadius: 12))
+                    .clipShape(.rect(bottomTrailingRadius: 36, topTrailingRadius: 36))
                     .padding(EdgeInsets(top: 4, leading: 12, bottom: 4, trailing: 0))
                 Spacer()
                 VStack(spacing: 4) {
