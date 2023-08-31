@@ -105,5 +105,10 @@ extension ProductListView {
             }
             .padding(.horizontal)
         }.background(Color.gray.opacity(0.2))
+            .refreshable {
+                Task {
+                    await viewModel.getProducts()
+                }
+            }.searchable(text: $searchText)
     }
 }
