@@ -20,8 +20,14 @@ class ProductListCoordinator {
     
     var navigationPath = NavigationPath()
     
+    var presentedPage: Page?
+    
     func push(page: Page) {
         navigationPath.append(page)
+    }
+    
+    func present(page: Page) {
+        presentedPage = page
     }
     
     @ViewBuilder
@@ -42,6 +48,14 @@ public struct ProductListCoordinatorView: View {
     public var body: some View {
         NavigationStack(path: $coordinator.navigationPath) {
             ProductListView()
+                .sheet(item: $coordinator.presentedPage,
+                       content: { page in
+                    coordinator.build(page: page)
+                })
+                .fullScreenCover(item: $coordinator.presentedPage,
+                                 content: { page in
+                    coordinator.build(page: page)
+                })
                 .navigationDestination(for: Page.self) { page in
                     coordinator.build(page: page)
                 }
